@@ -1,12 +1,16 @@
 import { homeContent } from "@/content/home";
 import { Check, Cross } from "@/components/icons";
+import { SectionLink } from "@/components/SectionLink";
 
-export type ComparisonProps = typeof homeContent.comparison;
+export type ComparisonProps = typeof homeContent.comparison & {
+  /** Optional "see more" link rendered under the section (homepage teaser). */
+  more?: { label: string; href: string };
+};
 
 export function Comparison(props: Partial<ComparisonProps> = {}) {
   const c = { ...homeContent.comparison, ...props };
   return (
-    <section className="section bg-ink-900/40">
+    <section id="primerjava" className="section bg-ink-900/40">
       <div className="container-x">
         <div className="mx-auto max-w-2xl text-center">
           <span className="eyebrow">{c.eyebrow}</span>
@@ -43,6 +47,12 @@ export function Comparison(props: Partial<ComparisonProps> = {}) {
             </ul>
           </div>
         </div>
+
+        <p className="mx-auto mt-10 max-w-2xl text-center text-lg font-medium text-mist-200">
+          {c.footnote}
+        </p>
+
+        {c.more && <SectionLink label={c.more.label} href={c.more.href} />}
       </div>
     </section>
   );

@@ -1,36 +1,30 @@
 import { Hero } from "@/components/sections/Hero";
+import { Pricing } from "@/components/sections/Pricing";
+import { Honesty } from "@/components/sections/Honesty";
 import { TrustBar } from "@/components/sections/TrustBar";
 import { Why } from "@/components/sections/Why";
 import { Comparison } from "@/components/sections/Comparison";
 import { Ecosystem } from "@/components/sections/Ecosystem";
 import { Steps } from "@/components/sections/Steps";
-import { Pricing } from "@/components/sections/Pricing";
 import { Faq } from "@/components/sections/Faq";
 import { FinalCta } from "@/components/sections/FinalCta";
-import { getPagePuckData } from "@/lib/sanity";
 
-export default async function HomePage() {
-  // At build time, pull this page's saved Puck layout from Sanity. With no
-  // Sanity configured this is `null`, so we render the local section stack below
-  // (byte-identical to before). `PuckRender` — and Puck's `<Render>` runtime — is
-  // imported lazily ONLY when there's a layout to render, so the public homepage
-  // bundle stays lean for the common (no-data / local-content) case.
-  const puckData = await getPagePuckData("home");
-
-  if (puckData) {
-    const { PuckRender } = await import("@/components/PuckRender");
-    return <PuckRender data={puckData} />;
-  }
-
+/**
+ * Homepage = quick overview. Cenik stays full; the other deep sections (Why,
+ * Comparison, Ecosystem) render as teasers with a "see more →" link to their
+ * dedicated subpage. Steps + FAQ have no subpage, so they stay full here.
+ */
+export default function HomePage() {
   return (
     <>
       <Hero />
-      <TrustBar />
-      <Why />
-      <Comparison />
-      <Ecosystem />
-      <Steps />
       <Pricing />
+      <Honesty />
+      <TrustBar />
+      <Why more={{ label: "Vse funkcionalnosti", href: "/funkcionalnosti/" }} />
+      <Comparison more={{ label: "Primerjava in tehnologija", href: "/tehnologije/#primerjava" }} />
+      <Ecosystem teaser more={{ label: "Več o tehnologiji", href: "/tehnologije/" }} />
+      <Steps />
       <Faq />
       <FinalCta />
     </>

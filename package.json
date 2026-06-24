@@ -2,28 +2,19 @@
   "name": "smart-home-site",
   "version": "0.1.0",
   "private": true,
-  "description": "Signapps smart-home marketing site — Next.js (static export) + Sanity, Slovenian.",
+  "description": "Signapps smart-home marketing site — Next.js (static export), Slovenian.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
-    "test": "vitest run",
-    "sanity": "sanity dev",
-    "sanity:deploy": "sanity deploy"
+    "test": "vitest run"
   },
   "dependencies": {
     "next": "15.1.6",
     "react": "19.0.0",
-    "react-dom": "19.0.0",
-    "next-sanity": "9.8.39",
-    "@sanity/client": "6.29.1",
-    "@sanity/image-url": "1.1.0",
-    "@portabletext/react": "3.2.0",
-    "@measured/puck": "0.20.2",
-    "sanity": "3.99.0",
-    "@sanity/vision": "3.99.0"
+    "react-dom": "19.0.0"
   },
   "devDependencies": {
     "@types/node": "22.10.7",
@@ -40,5 +31,10 @@
     "@testing-library/react": "16.1.0",
     "@testing-library/jest-dom": "6.6.3",
     "jsdom": "25.0.1"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
   }
 }

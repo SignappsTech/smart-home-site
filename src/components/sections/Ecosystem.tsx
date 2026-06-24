@@ -1,8 +1,16 @@
+import Link from "next/link";
 import { homeContent } from "@/content/home";
 import { ecosystem } from "@/lib/brand";
 import { HubDiagram } from "@/components/graphics/HubDiagram";
+import { ArrowRight } from "@/components/icons";
 
-export type EcosystemProps = typeof homeContent.ecosystem;
+export type EcosystemProps = typeof homeContent.ecosystem & {
+  /** Homepage teaser: hide the brands grid + connectivity chips (full detail
+   *  lives on /tehnologije), leaving just the diagram, copy, and "see more". */
+  teaser?: boolean;
+  /** Optional "see more" link rendered under the copy (homepage teaser). */
+  more?: { label: string; href: string };
+};
 
 export function Ecosystem(props: Partial<EcosystemProps> = {}) {
   const e = { ...homeContent.ecosystem, ...props };
@@ -21,39 +29,52 @@ export function Ecosystem(props: Partial<EcosystemProps> = {}) {
           <h2 className="mt-4 text-3xl font-bold sm:text-4xl">{e.title}</h2>
           <p className="mt-4 max-w-lg text-mist-300">{e.subtitle}</p>
 
-          {/* supported brands */}
-          <div className="mt-8 grid gap-3 sm:grid-cols-2">
-            {ecosystem.brands.map((b) => (
-              <div
-                key={b.name}
-                className="rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-3"
-              >
-                <p className="font-semibold text-white">{b.name}</p>
-                <p className="text-xs text-mist-400">{b.note}</p>
+          {!e.teaser && (
+            <>
+              {/* supported brands */}
+              <div className="mt-8 grid gap-3 sm:grid-cols-2">
+                {ecosystem.brands.map((b) => (
+                  <div
+                    key={b.name}
+                    className="rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-3"
+                  >
+                    <p className="font-semibold text-white">{b.name}</p>
+                    <p className="text-xs text-mist-400">{b.note}</p>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
 
-          {/* connectivity / roadmap */}
-          <div className="mt-6 flex flex-wrap gap-2">
-            {ecosystem.connectivity.map((c) => (
-              <span
-                key={c.name}
-                className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-medium ${
-                  c.available
-                    ? "border border-brand-400/30 bg-brand-400/10 text-brand-200"
-                    : "border border-accent-400/30 bg-accent-500/10 text-accent-400"
-                }`}
-              >
-                {c.name}
-                {!c.available && "label" in c && (
-                  <span className="rounded-full bg-accent-500/20 px-1.5 py-0.5 text-[10px] uppercase tracking-wide">
-                    {c.label}
+              {/* connectivity / roadmap */}
+              <div className="mt-6 flex flex-wrap gap-2">
+                {ecosystem.connectivity.map((c) => (
+                  <span
+                    key={c.name}
+                    className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-medium ${
+                      c.available
+                        ? "border border-brand-400/30 bg-brand-400/10 text-brand-200"
+                        : "border border-accent-400/30 bg-accent-500/10 text-accent-400"
+                    }`}
+                  >
+                    {c.name}
+                    {!c.available && "label" in c && (
+                      <span className="rounded-full bg-accent-500/20 px-1.5 py-0.5 text-[10px] uppercase tracking-wide">
+                        {c.label}
+                      </span>
+                    )}
                   </span>
-                )}
-              </span>
-            ))}
-          </div>
+                ))}
+              </div>
+            </>
+          )}
+
+          {e.more && (
+            <Link
+              href={e.more.href}
+              className="mt-8 inline-flex items-center gap-2 text-sm font-medium text-brand-300 transition-colors hover:text-brand-200"
+            >
+              {e.more.label} <ArrowRight className="h-4 w-4" />
+            </Link>
+          )}
         </div>
       </div>
     </section>

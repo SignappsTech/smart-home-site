@@ -10,9 +10,7 @@ export default defineConfig({
   plugins: [react()] as any,
   resolve: {
     alias: [
-      // Mirror tsconfig paths. `@/sanity/*` -> ./sanity/* must be matched
-      // before the catch-all `@/*` -> ./src/*, so it's listed first.
-      { find: /^@\/sanity\//, replacement: path.resolve(__dirname, "sanity") + "/" },
+      // Mirror the tsconfig `@/*` -> ./src/* path alias.
       { find: /^@\//, replacement: path.resolve(__dirname, "src") + "/" },
     ],
   },
@@ -20,8 +18,6 @@ export default defineConfig({
     environment: "jsdom",
     globals: true,
     setupFiles: ["./vitest.setup.ts"],
-    // Don't process/transform CSS — EditorCanvas imports "@measured/puck/puck.css".
-    // With css:false, vitest stubs CSS modules so the import is a no-op.
     css: false,
     include: ["src/**/*.test.{ts,tsx}"],
   },

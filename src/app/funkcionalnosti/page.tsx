@@ -19,7 +19,26 @@ export default function FunkcionalnostiPage() {
         subtitle={f.intro}
       />
 
-      <section className="section">
+      {/* Custom dashboard highlight — our designed UI vs. a raw HA panel */}
+      <section className="section pt-0">
+        <div className="container-x">
+          <div className="overflow-hidden rounded-4xl border border-brand-400/20 bg-gradient-to-b from-brand-400/[0.07] to-transparent p-8 shadow-glow sm:p-10">
+            <span className="eyebrow">{f.dashboard.eyebrow}</span>
+            <h2 className="mt-4 text-2xl font-bold sm:text-3xl">{f.dashboard.title}</h2>
+            <p className="mt-4 max-w-2xl leading-relaxed text-mist-300">{f.dashboard.text}</p>
+            <ul className="mt-7 grid gap-3 sm:grid-cols-2">
+              {f.dashboard.points.map((p) => (
+                <li key={p} className="flex items-start gap-3 text-sm text-mist-200">
+                  <Check className="mt-0.5 h-5 w-5 shrink-0 text-brand-300" />
+                  {p}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section className="section pt-0">
         <div className="container-x grid gap-6 lg:grid-cols-2">
           {f.groups.map((g) => (
             <div key={g.title} className="card hover:border-brand-400/30">

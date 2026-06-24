@@ -22,9 +22,9 @@ export const brand = {
   lang: "sl",
   // Default OpenGraph / SEO copy (Slovenian).
   seo: {
-    title: "Signapps — pametni dom brez posegov v inštalacije",
+    title: "Signapps — pametni dom brez razbijanja sten",
     description:
-      "Pametni dom na osnovi Home Assistant: Shelly, Sonoff, Aqara in Philips Hue v eni aplikaciji. Brezžična namestitev v 1–2 dneh, brez razbijanja sten. Matter kmalu.",
+      "Pametni dom na osnovi Home Assistant: Shelly, Sonoff, Aqara in Philips Hue v eni aplikaciji. Brezžično + minimalni električni poseg, brez razbijanja sten, vgradnja v 1–2 dneh. Matter kmalu.",
   },
   social: {
     instagram: "https://instagram.com/",

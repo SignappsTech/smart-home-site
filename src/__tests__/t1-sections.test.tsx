@@ -2,6 +2,7 @@ import { describe, it, expect, afterEach } from "vitest";
 import { render, screen, cleanup } from "@testing-library/react";
 
 import { Hero, type HeroProps } from "@/components/sections/Hero";
+import { Honesty, type HonestyProps } from "@/components/sections/Honesty";
 import { TrustBar, type TrustBarProps } from "@/components/sections/TrustBar";
 import { Why, type WhyProps } from "@/components/sections/Why";
 import { Comparison, type ComparisonProps } from "@/components/sections/Comparison";
@@ -35,10 +36,21 @@ describe("T-1: sections render from props", () => {
   it("Hero: default + override", () => {
     const { rerender } = render(<Hero />);
     expect(
-      screen.getByText(/Tehnološko napreden pametni dom/),
+      screen.getByText(/Pameten dom v vašem obstoječem domu/),
     ).toBeInTheDocument();
 
     rerender(<Hero {...titleOverride<HeroProps>("POVOZI")} />);
+    expect(screen.getByText("POVOZI")).toBeInTheDocument();
+  });
+
+  it("Honesty: default + override", () => {
+    render(<Honesty />);
+    expect(
+      screen.getByText("Pošteno o tem, kaj naredimo v vašem domu"),
+    ).toBeInTheDocument();
+    cleanup();
+
+    render(<Honesty {...titleOverride<HonestyProps>("POVOZI")} />);
     expect(screen.getByText("POVOZI")).toBeInTheDocument();
   });
 
@@ -58,7 +70,7 @@ describe("T-1: sections render from props", () => {
   it("Why: default + override", () => {
     render(<Why />);
     expect(
-      screen.getByText("Udobje, varnost in prihranek — vsak dan"),
+      screen.getByText("Kaj se spremeni v vašem vsakdanu"),
     ).toBeInTheDocument();
     cleanup();
 
@@ -68,7 +80,9 @@ describe("T-1: sections render from props", () => {
 
   it("Comparison: default + override", () => {
     render(<Comparison />);
-    expect(screen.getByText("Zakaj brezžični pametni dom")).toBeInTheDocument();
+    expect(
+      screen.getByText("Inteligenca žičnega sistema — brez prenove končanega doma"),
+    ).toBeInTheDocument();
     cleanup();
 
     render(<Comparison {...titleOverride<ComparisonProps>("POVOZI")} />);
@@ -100,8 +114,12 @@ describe("T-1: sections render from props", () => {
   it("Pricing: default + override", () => {
     render(<Pricing />);
     expect(
-      screen.getByText("Dostopna cena za celovito rešitev"),
+      screen.getByText("Trije paketi — od hitre rešitve do doma po meri"),
     ).toBeInTheDocument();
+    // all three tiers render
+    expect(screen.getByText("Osnovni")).toBeInTheDocument();
+    expect(screen.getByText("Napredni")).toBeInTheDocument();
+    expect(screen.getByText("Premium")).toBeInTheDocument();
     cleanup();
 
     render(<Pricing {...titleOverride<PricingProps>("POVOZI")} />);

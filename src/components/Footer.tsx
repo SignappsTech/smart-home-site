@@ -15,8 +15,8 @@ export function Footer() {
           <div>
             <Logo className="h-8" />
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-mist-300">
-              Brezžični pametni dom na osnovi Home Assistant — brez posegov v
-              inštalacije, v eni aplikaciji.
+              Pameten dom na osnovi Home Assistant — brez razbijanja sten, z
+              minimalnim električnim posegom, vse v eni aplikaciji.
             </p>
             <div className="mt-5 flex flex-wrap gap-2">
               {ecosystem.brands.map((b) => (

@@ -1,10 +1,17 @@
 import { homeContent } from "@/content/home";
 import { FeatureIcon } from "@/components/icons";
+import { SectionLink } from "@/components/SectionLink";
 
-export type WhyProps = typeof homeContent.why;
+export type WhyProps = typeof homeContent.why & {
+  /** Cap the number of cards shown (homepage teaser). Omit to show all. */
+  limit?: number;
+  /** Optional "see more" link rendered under the grid (homepage teaser). */
+  more?: { label: string; href: string };
+};
 
 export function Why(props: Partial<WhyProps> = {}) {
   const w = { ...homeContent.why, ...props };
+  const items = w.limit ? w.items.slice(0, w.limit) : w.items;
   return (
     <section id="zakaj" className="section">
       <div className="container-x">
@@ -14,7 +21,7 @@ export function Why(props: Partial<WhyProps> = {}) {
         </div>
 
         <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {w.items.map((item) => (
+          {items.map((item) => (
             <div key={item.title} className="card group hover:border-brand-400/30">
               <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-400/10 text-brand-300 ring-1 ring-brand-400/20 transition-transform group-hover:scale-110">
                 <FeatureIcon name={item.icon} />
@@ -26,6 +33,8 @@ export function Why(props: Partial<WhyProps> = {}) {
             </div>
           ))}
         </div>
+
+        {w.more && <SectionLink label={w.more.label} href={w.more.href} />}
       </div>
     </section>
   );

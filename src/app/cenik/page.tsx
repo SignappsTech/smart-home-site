@@ -5,7 +5,8 @@ import { Faq } from "@/components/sections/Faq";
 
 export const metadata: Metadata = {
   title: "Cenik",
-  description: "Celovita rešitev pametnega doma že od 2.000 € — brez skritih stroškov.",
+  description:
+    "Trije paketi pametnega doma — od hitre rešitve (od 2.000 €) do izvedbe povsem po meri. Brez skritih stroškov, brez naročnine.",
 };
 
 export default function CenikPage() {
@@ -13,8 +14,8 @@ export default function CenikPage() {
     <>
       <PageHeader
         eyebrow="Cenik"
-        title="Dostopna cena za celovito rešitev"
-        subtitle="Brez skritih stroškov in brez dragih nadgradenj. Plačate to, kar potrebujete."
+        title="Od hitre rešitve do doma po meri"
+        subtitle="Trije paketi za vsak žep in vsako željo. Plačate to, kar potrebujete — brez skritih stroškov in brez naročnine."
       />
       <Pricing />
       <Faq />
