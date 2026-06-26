@@ -19,7 +19,7 @@ export default function HomePage() {
     <>
       <Hero />
       <Pricing />
-      <Honesty />
+      {/* <Honesty /> */}
       <TrustBar />
       <Why more={{ label: "Vse funkcionalnosti", href: "/funkcionalnosti/" }} />
       <Comparison more={{ label: "Primerjava in tehnologija", href: "/tehnologije/#primerjava" }} />

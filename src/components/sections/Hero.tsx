@@ -53,7 +53,7 @@ export function Hero(props: Partial<HeroProps> = {}) {
         {/* phone mockup */}
         <div className="relative mx-auto w-full max-w-sm">
           <div className="absolute inset-0 -z-10 bg-radial-brand blur-2xl" aria-hidden />
-          <div className="animate-floaty">
+          <div className="">
             <PhoneMockup className="mx-auto h-auto w-[260px] drop-shadow-2xl sm:w-[300px]" />
           </div>
         </div>

@@ -1,11 +1,15 @@
+import type { ReactNode } from "react";
+
 export function PageHeader({
   eyebrow,
   title,
   subtitle,
+  children,
 }: {
   eyebrow?: string;
   title: string;
   subtitle?: string;
+  children?: ReactNode;
 }) {
   return (
     <section className="bg-hero relative overflow-hidden border-b border-white/5">
@@ -14,12 +18,15 @@ export function PageHeader({
         style={{ backgroundSize: "44px 44px", maskImage: "radial-gradient(70% 70% at 50% 0%, black, transparent)" }}
         aria-hidden
       />
-      <div className="container-x relative py-16 text-center sm:py-20">
+      <div
+        className={`container-x relative text-center ${children ? "pb-16 pt-16 sm:pb-20 sm:pt-20" : "py-16 sm:py-20"}`}
+      >
         {eyebrow && <span className="eyebrow">{eyebrow}</span>}
         <h1 className="mx-auto mt-4 max-w-3xl text-4xl font-bold sm:text-5xl">{title}</h1>
         {subtitle && (
           <p className="mx-auto mt-4 max-w-2xl text-lg text-mist-300">{subtitle}</p>
         )}
+        {children}
       </div>
     </section>
   );

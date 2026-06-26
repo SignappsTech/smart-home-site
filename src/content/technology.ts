@@ -23,7 +23,7 @@ export const technologyContent = {
   // Engineer trust levers (from the persona panel): open · local · you own it.
   pillars: {
     eyebrow: "Zakaj odprt sistem",
-    title: "Trije razlogi, da ostane vaš",
+    title: "Sistem ostane vaš",
     items: [
       {
         icon: "sliders",
@@ -33,7 +33,7 @@ export const technologyContent = {
       {
         icon: "shield",
         title: "Lokalen — deluje brez interneta",
-        text: "Osnovne funkcije (luči, scene, ključavnice) tečejo lokalno in delujejo tudi ob izpadu interneta. Vaši podatki ostanejo doma, ne v tujem oblaku.",
+        text: "Osnovne funkcije (luči, ključavnice, avtomatike) tečejo lokalno in delujejo tudi ob izpadu interneta. Vaši podatki ostanejo doma, ne v tujem oblaku.",
       },
       {
         icon: "sparkles",
@@ -52,7 +52,7 @@ export const technologyContent = {
   connectivity: {
     eyebrow: "Povezljivost",
     title: "Kako naprave komunicirajo",
-    text: "Naprave povezujemo prek Wi-Fi in Bluetooth LE. Standarda Matter in Thread, ki obljubljata še boljšo združljivost med proizvajalci, dodajamo, ko bosta v sistemu zrela.",
+    text: "Naprave povezujemo brezžično prek Wi-Fi, Zigbee in Bluetooth LE. Podpora za Matter in Thread, ki obljubljata še boljšo združljivost med proizvajalci, je v pripravi",
   },
 
   // Our custom dashboard — same honest framing as /funkcionalnosti, but with
@@ -63,15 +63,15 @@ export const technologyContent = {
     text: "Nad Home Assistant postavimo svojo, oblikovano nadzorno ploščo s tipiziranimi karticami (luči, senzorji, ogrevanje, kamere). Razporeditev urejate sami (povleci in spusti), nove naprave pa za vas dodamo in pravilno nastavimo — da ostane vmesnik pregleden in dosleden.",
   },
 
-  // Be precise about scope — the engineer persona rewards honesty here.
+  // What a real install looks like — scope and expectations, not sales meta.
   honest: {
-    eyebrow: "Pošteno",
-    title: "Kaj to pomeni v praksi",
+    eyebrow: "V praksi",
+    title: "Kaj storimo v vašem domu",
     points: [
-      "Releje (npr. Shelly) vgradimo v vašo obstoječo napeljavo — minimalen, čist električni poseg, brez razbijanja sten.",
+      "Releje (npr. Shelly) vgradimo v obstoječo napeljavo — za stikala in v elektro omarico. Edini električni poseg, brez razbijanja sten.",
       "Električni del opravi usposobljen monter po veljavnih standardih, z računom in garancijo.",
-      "Nove naprave morajo biti združljive s sistemom — pred nakupom svetujemo, kaj se splača.",
-      "Matter in Thread označujemo pošteno kot »kmalu«, dokler nista zanesljivo podprta.",
+      "Naprave izberemo glede na vaš dom in proračun — pred nakupom svetujemo, kaj je združljivo in se splača.",
+      "Po vgradnji vam pokažemo uporabo in ostajamo na voljo za podporo — za vsakodnevno delovanje pa niste odvisni od nas.",
     ],
   },
 } as const;

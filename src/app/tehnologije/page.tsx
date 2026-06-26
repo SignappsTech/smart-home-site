@@ -10,7 +10,7 @@ import { ecosystem } from "@/lib/brand";
 export const metadata: Metadata = {
   title: "Tehnologije",
   description:
-    "Na čem gradimo: odprt in lokalen Home Assistant, naprave Shelly, Sonoff, Aqara in Philips Hue, povezljivost Wi-Fi/Bluetooth (Matter in Thread kmalu). Sistem ostane vaš.",
+    "Na čem gradimo: odprt in lokalen Home Assistant, naprave Shelly, Sonoff, Aqara in Philips Hue, povezljivost Wi-Fi, Zigbee in Bluetooth (Matter in Thread kmalu). Sistem ostane vaš.",
 };
 
 export default function TehnologijePage() {

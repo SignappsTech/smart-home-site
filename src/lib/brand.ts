@@ -24,7 +24,7 @@ export const brand = {
   seo: {
     title: "Signapps — pametni dom brez razbijanja sten",
     description:
-      "Pametni dom na osnovi Home Assistant: Shelly, Sonoff, Aqara in Philips Hue v eni aplikaciji. Brezžično + minimalni električni poseg, brez razbijanja sten, vgradnja v 1–2 dneh. Matter kmalu.",
+      "Pametni dom na osnovi Home Assistant: Shelly, Sonoff, Aqara in Philips Hue v eni aplikaciji. Brezžično + minimalni električni poseg, brez razbijanja sten, vgradnja v nekaj dneh. Matter kmalu.",
   },
   social: {
     instagram: "https://instagram.com/",
@@ -51,6 +51,7 @@ export const ecosystem = {
   ],
   connectivity: [
     { name: "Wi-Fi", available: true },
+    { name: "Zigbee", available: true },
     { name: "Bluetooth LE", available: true },
     { name: "Matter", available: false, label: "kmalu" },
     { name: "Thread", available: false, label: "kmalu" },

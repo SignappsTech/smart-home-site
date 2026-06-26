@@ -13,22 +13,22 @@
 export const homeContent = {
   hero: {
     eyebrow: "Pametni dom · odprt sistem Home Assistant",
-    title: "Pameten dom v vašem obstoječem domu — brez razbijanja sten",
+    title: "Pameten dom v vašem domu — brez razbijanja sten",
     subtitle:
-      "Luči, senčila, ogrevanje, varnost in poraba — vse v eni aplikaciji. Releje vgradimo v vašo obstoječo napeljavo (minimalni, čisti električni poseg), naprave povežemo brezžično. Brez gradbenih del, brez prahu, vgradnja v 1–2 dneh.",
+      "Luči, senčila, ogrevanje, varnost in poraba — vse v eni aplikaciji. Krmilne module vgradimo v vašo obstoječo napeljavo (minimalni, čisti električni poseg), naprave povežemo brezžično. Hitra vgradnja, brez gradbenih del, brez prahu.",
     priceLabel: "Že od",
-    price: "2.000 €",
-    primaryCta: { label: "Brezplačen ogled in ponudba", href: "/kontakt/" },
+    price: "2.500 €",
+    primaryCta: { label: "Brezplačen posvet in ponudba", href: "/kontakt/" },
     secondaryCta: { label: "Poglej cenik", href: "#cenik" },
     badges: [
       "Brez razbijanja sten",
-      "Vgradnja v 1–2 dneh",
+      "Vgradnja v nekaj dneh",
       "Vaš sistem ostane vaš",
       "24-mesečna garancija",
     ],
   },
 
-  honesty: {
+  /* honesty: {
     eyebrow: "Pošteno",
     title: "Pošteno o tem, kaj naredimo v vašem domu",
     intro:
@@ -40,7 +40,7 @@ export const homeContent = {
       "Večino domov zaključimo v 1–2 dneh.",
       "Po vgradnji za seboj pospravimo — dom ostane tak, kot je bil.",
     ],
-  },
+  }, */
 
   trust: {
     title: "Delujemo z napravami, ki jim zaupate",
@@ -58,7 +58,7 @@ export const homeContent = {
       },
       {
         icon: "bolt",
-        title: "Nižji računi, kjer je to res mogoče",
+        title: "Nižji računi",
         text: "Avtomatika senčil, ogrevanja in luči ter nadzor porabe znižajo stroške. Na ogledu pošteno povemo, kje prihranek je in kje ga ni.",
       },
       {
@@ -69,7 +69,7 @@ export const homeContent = {
       {
         icon: "sparkles",
         title: "Dom, ki se prilagodi vam",
-        text: "Scene za jutro, večer in odhod od doma poskrbijo, da se stvari zgodijo same — brez naprezanja, brez razmišljanja.",
+        text: "Prizori za jutro, večer in odhod od doma poskrbijo, da se stvari zgodijo same — brez naprezanja, brez razmišljanja.",
       },
     ],
   },
@@ -106,7 +106,7 @@ export const homeContent = {
     eyebrow: "Tehnologija",
     title: "Odprt sistem, zgrajen na Home Assistant",
     subtitle:
-      "Home Assistant je odprt nadzorni center vašega doma. Povezuje vodilne znamke naprav prek Wi-Fi in Bluetooth — Matter in Thread sta v pripravi.",
+      "Home Assistant je odprt nadzorni center vašega doma. Povezuje naprave vodilnih znamk prek Wi-Fi, Zigbee in Bluetooth LE — Matter in Thread sta v pripravi.",
   },
 
   steps: {
@@ -115,18 +115,18 @@ export const homeContent = {
     items: [
       {
         n: "01",
-        title: "Brezplačen ogled",
+        title: "Brezplačen posvet in ogled",
         text: "Skupaj pregledamo vaše želje in prostor ter pripravimo predlog rešitve in ponudbo — vnaprej in pisno.",
       },
       {
         n: "02",
-        title: "Vgradnja v 1–2 dneh",
-        text: "Naprave povežemo brezžično, releje vgradimo z minimalnim, čistim električnim posegom — brez gradbenih del, brez prahu.",
+        title: "Vgradnja v nekaj dneh",
+        text: "Naprave povežemo brezžično, krmilne module vgradimo z minimalnim, čistim električnim posegom — brez gradbenih del, brez prahu.",
       },
       {
         n: "03",
         title: "Predaja in podpora",
-        text: "Pokažemo vam uporabo, nastavimo scene po meri in ostanemo na voljo za podporo.",
+        text: "Pokažemo vam uporabo, nastavimo prizore in avtomatizacije po meri ter ostanemo na voljo za podporo.",
       },
     ],
   },
@@ -135,20 +135,20 @@ export const homeContent = {
     eyebrow: "Cenik",
     title: "Trije paketi — od hitre rešitve do doma po meri",
     subtitle:
-      "Pametni dom lahko naredimo hitro in ugodno, ali pa si vzamemo čas in ga skrojimo povsem po vas. Vsi paketi vključujejo brezplačen ogled, vgradnjo z minimalnim, čistim električnim posegom in 24-mesečno garancijo.",
+      "Pametni dom lahko naredimo hitro in ugodno, ali pa si vzamemo čas in ga skrojimo povsem po vas. Vsi paketi vključujejo brezplačen posvet in ogled lokacije, vgradnjo z minimalnim, čistim električnim posegom in 24-mesečno garancijo.",
     tiers: [
       {
         name: "Osnovni",
         tagline: "Hitro in preprosto",
         bestFor: "Za tiste, ki želijo pametne ključne stvari brez odvečnega zapletanja.",
-        price: "od 2.000 €",
-        priceNote: "vgradnja v ~1 dan",
+        price: "od 2.500 €",
+        priceNote: "vgradnja v nekaj dneh",
         features: [
           "1–2 prostora oz. ključne točke (luči, vtičnice, senčila)",
           "Standardna, preverjena postavitev",
           "Vse v eni aplikaciji",
-          "Osnovne scene (jutro / večer / odhod)",
-          "Brezplačen ogled in svetovanje",
+          "Osnovni prizori (jutro / večer / odhod)",
+          "Brezplačen posvet, ogled in svetovanje",
           "24-mesečna garancija na naprave",
         ],
         example:
@@ -160,16 +160,16 @@ export const homeContent = {
         name: "Napredni",
         tagline: "Celovit pameten dom",
         bestFor: "Za stanovanje ali manjšo hišo, ki naj postane resnično pametna.",
-        price: "od 4.500 €",
-        priceNote: "vgradnja v 1–2 dni",
+        price: "od 8.000 €",
+        priceNote: "vgradnja v nekaj dneh",
         features: [
+          "Vse v osnovnem paketu",
           "Celotno stanovanje / manjša hiša",
-          "Avtomatike po meri (ogrevanje, senčila, razsvetljava)",
+          "Avtomatizacije po meri (ogrevanje, senčila, razsvetljava)",
           "Varnost: pametna ključavnica, video zvonec, senzorji",
           "Nadzor in optimizacija porabe",
-          "Scene, prilagojene vašim navadam",
+          "Prizori, prilagojeni vašim navadam",
           "Prednostna podpora po vgradnji",
-          "24-mesečna garancija na naprave",
         ],
         example:
           "Primer obsega: luči, senčila in ogrevanje v celotnem 2–3 sobnem stanovanju + pametna ključavnica in video zvonec.",
@@ -184,20 +184,19 @@ export const homeContent = {
         price: "od 15.000 €",
         priceNote: "izvedba po dogovoru",
         features: [
+          "Vse v naprednem paketu",
           "Povsem prilagodljivo — rešitev zasnujemo od začetka, po vaših željah",
-          "Osebno svetovanje in zasnova rešitve od A do Ž",
-          "Napredne avtomatike in scenariji po meri",
+          "Napredne avtomatike in prizori po meri",
           "Integracija dodatnih sistemov (multimedija, klima, vrata, kamere)",
           "Fazna izvedba in usklajevanje z izvajalci",
           "Osebni stik in dolgoročna podpora",
-          "24-mesečna garancija na naprave",
         ],
         example: "Brez vnaprej določenega obsega — vse skrojimo po vašem domu in željah.",
         featured: false,
         cta: { label: "Dogovori se za posvet", href: "/kontakt/" },
       },
     ],
-    note: "Cene so okvirne in odvisne od velikosti doma ter števila naprav. Točno ponudbo pripravimo po brezplačnem ogledu — vnaprej in pisno. Brez skritih stroškov, brez naročnine, strojno opremo imate v lasti. Začnete lahko manjše in sistem kadar koli razširite — nove naprave za vas dodamo in nastavimo.",
+    note: "Cene so okvirne in odvisne od velikosti doma ter števila naprav. Točno ponudbo pripravimo po brezplačnem posvetu in ogledu lokacije — vnaprej in pisno. Brez skritih stroškov, brez naročnine, strojno opremo imate v lasti. Začnete lahko manjše in sistem kadar koli razširite, saj ponujamo tudi nadgradnje obstoječih sistemov.",
   },
 
   faq: {
@@ -206,7 +205,7 @@ export const homeContent = {
     items: [
       {
         q: "Ali morate razbijati stene ali posegati v napeljavo?",
-        a: "Sten ne razbijamo in gradbenih del ni. Je pa potreben minimalen električni poseg: usposobljen monter vgradi releje v vašo obstoječo napeljavo — za stikala in v elektro omarico. Čisto, hitro, z garancijo in računom.",
+        a: "Sten ne razbijamo in gradbenih del ni. Je pa potreben minimalen električni poseg: usposobljen elektro-monter vgradi krmilne module (releje) v vašo obstoječo napeljavo — za stikala in v elektro omarico. Čisto, hitro, z garancijo in računom.",
       },
       {
         q: "Kdo opravi električna dela in ali je varno?",
@@ -226,7 +225,7 @@ export const homeContent = {
       },
       {
         q: "Ali sem vezan na vas?",
-        a: "Ne. Sistem je odprt (Home Assistant) in razširljiv s poljubnimi združljivimi napravami. Razporeditev nadzorne plošče prilagajate sami (povleci in spusti), nove naprave pa za vas dodamo in nastavimo, kadar koli. Strojno opremo imate v lasti.",
+        a: "Ne. Sistem je odprt (Home Assistant) in razširljiv s poljubnimi združljivimi napravami. Razporeditev nadzorne plošče prilagajate sami (povleci in spusti). Strojno opremo imate v lasti.",
       },
       {
         q: "Kaj če se kaj pokvari?",
@@ -234,7 +233,7 @@ export const homeContent = {
       },
       {
         q: "Koliko časa traja vgradnja?",
-        a: "Večino domov zaključimo v 1–2 dneh, odvisno od obsega.",
+        a: "Čas vgradnje je odvisen od vaših želja. Manjši projekti so lahko končani v nekaj dneh, večji pa v nekaj tednih.",
       },
     ],
   },
@@ -242,8 +241,8 @@ export const homeContent = {
   finalCta: {
     title: "Pametni dom za vsak dom — že danes",
     subtitle:
-      "Rezervirajte brezplačen ogled in pripravimo rešitev po meri vašega doma.",
-    cta: { label: "Brezplačen ogled in ponudba", href: "/kontakt/" },
+      "Rezervirajte brezplačen posvet, da pripravimo rešitev po meri vašega doma.",
+    cta: { label: "Brezplačen posvet in ponudba", href: "/kontakt/" },
   },
 } as const;
 
