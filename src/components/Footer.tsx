@@ -2,7 +2,7 @@ import Link from "next/link";
 import { brand, ecosystem } from "@/lib/brand";
 import { navLinks } from "@/lib/nav";
 import { Logo } from "@/components/Logo";
-import { Phone, Mail } from "@/components/icons";
+import { Phone, Mail, MapPin } from "@/components/icons";
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -69,6 +69,16 @@ export function Footer() {
                   className="inline-flex items-center gap-2 text-sm text-mist-300 hover:text-white"
                 >
                   <Mail className="h-4 w-4 text-brand-300" /> {brand.email}
+                </a>
+              </li>
+              <li>
+                <a
+                  href={brand.addressMapsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm text-mist-300 hover:text-white"
+                >
+                  <MapPin className="h-4 w-4 shrink-0 text-brand-300" /> {brand.address}
                 </a>
               </li>
             </ul>

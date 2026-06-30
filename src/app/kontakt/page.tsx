@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { brand } from "@/lib/brand";
 import { PageHeader } from "@/components/PageHeader";
 import { ContactForm } from "@/components/ContactForm";
-import { Phone, Mail } from "@/components/icons";
+import { Phone, Mail, MapPin } from "@/components/icons";
 
 export const metadata: Metadata = {
   title: "Kontakt",
@@ -41,6 +41,22 @@ export default function KontaktPage() {
                 <span>
                   <span className="block text-sm text-mist-400">Pišite</span>
                   <span className="block text-lg font-semibold text-white">{brand.email}</span>
+                </span>
+              </a>
+            </div>
+            <div className="card">
+              <a
+                href={brand.addressMapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-4"
+              >
+                <span className="grid h-12 w-12 place-items-center rounded-2xl bg-brand-400/10 text-brand-300 ring-1 ring-brand-400/20">
+                  <MapPin />
+                </span>
+                <span>
+                  <span className="block text-sm text-mist-400">Lokacija</span>
+                  <span className="block text-lg font-semibold text-white">{brand.address}</span>
                 </span>
               </a>
             </div>

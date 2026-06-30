@@ -62,12 +62,12 @@ export const homeContent = {
         text: "Avtomatika senčil, ogrevanja in luči ter nadzor porabe znižajo stroške. Na ogledu pošteno povemo, kje prihranek je in kje ga ni.",
       },
       {
-        icon: "sliders",
+        icon: "tablet-smartphone",
         title: "Vse na enem mestu",
         text: "Konec petih aplikacij in predala daljincev. Vse — od luči do kamer — v eni preprosti aplikaciji, ki jo zna uporabljati vsa družina.",
       },
       {
-        icon: "sparkles",
+        icon: "repeat",
         title: "Dom, ki se prilagodi vam",
         text: "Prizori za jutro, večer in odhod od doma poskrbijo, da se stvari zgodijo same — brez naprezanja, brez razmišljanja.",
       },
@@ -79,7 +79,7 @@ export const homeContent = {
     title: "Inteligenca žičnega sistema — brez prenove končanega doma",
     footnote: "Ni vam treba izbirati med lepo dokončanim in resnično pametnim domom.",
     wireless: {
-      label: "Signapps — brezžično + minimalni poseg",
+      label: "Signapps — brezžično z minimalnim posegom",
       points: [
         "Releji v obstoječo napeljavo — brez razbijanja sten",
         "Primeren za že zgrajen ali opremljen dom",

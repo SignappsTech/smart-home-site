@@ -22,7 +22,7 @@ export const featuresContent = {
   groups: [
     {
       title: "Razsvetljava",
-      icon: "sparkles",
+      icon: "lightbulb",
       text: "Pametne luči in scene za vsak trenutek — od jutranjega prebujanja do večernega filma. Samodejni vklop ob gibanju ali mraku.",
       points: ["Philips Hue in druge pametne luči", "Scene in časovniki", "Vklop ob gibanju ali somraku"],
     },
@@ -34,7 +34,7 @@ export const featuresContent = {
     },
     {
       title: "Ogrevanje in klima",
-      icon: "sliders",
+      icon: "air-vent",
       text: "Krmiljenje ogrevanja po prostorih in urnikih. Dom se ogreje, ko se vračate, in varčuje, ko ste odsotni.",
       points: ["Termostati in talno ogrevanje", "Urniki po prostorih", "Samodejno znižanje ob odsotnosti"],
     },

@@ -17,6 +17,9 @@ export const brand = {
   email: "info@signapps.si",
   phone: "+386 41 000 000", // TODO: real number
   phoneDisplay: "041 000 000",
+  address: "Savska cesta 3a, 1000 Ljubljana",
+  addressMapsUrl:
+    "https://maps.google.com/?q=Savska+cesta+3a,+1000+Ljubljana",
   // Locale + language for <html lang> and metadata.
   locale: "sl_SI",
   lang: "sl",
@@ -24,7 +27,7 @@ export const brand = {
   seo: {
     title: "Signapps — pametni dom brez razbijanja sten",
     description:
-      "Pametni dom na osnovi Home Assistant: Shelly, Sonoff, Aqara in Philips Hue v eni aplikaciji. Brezžično + minimalni električni poseg, brez razbijanja sten, vgradnja v nekaj dneh. Matter kmalu.",
+      "Pametni dom na osnovi Home Assistant: Shelly, Sonoff, Aqara in Philips Hue v eni aplikaciji. Brezžično z minimalnimi električnimi posegi, brez razbijanja sten, vgradnja v nekaj dneh. Matter kmalu.",
   },
   social: {
     instagram: "https://instagram.com/",

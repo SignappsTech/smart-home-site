@@ -26,17 +26,17 @@ export const technologyContent = {
     title: "Sistem ostane vaš",
     items: [
       {
-        icon: "sliders",
+        icon: "unlock",
         title: "Odprt — brez vezanosti",
         text: "Gradimo na Home Assistant in standardnih napravah (Shelly, Aqara, Hue …). Niste ujeti v zaprt sistem enega proizvajalca — naprave lahko zamenjate ali nadgradite.",
       },
       {
-        icon: "shield",
+        icon: "wifi-off",
         title: "Lokalen — deluje brez interneta",
         text: "Osnovne funkcije (luči, ključavnice, avtomatike) tečejo lokalno in delujejo tudi ob izpadu interneta. Vaši podatki ostanejo doma, ne v tujem oblaku.",
       },
       {
-        icon: "sparkles",
+        icon: "database-plus",
         title: "Vaš — strojno opremo imate v lasti",
         text: "Strojna oprema je vaša, sistem je vaš. Brez naročnine za uporabo. Po vgradnji vas podpiramo, a niste odvisni od nas, da dom deluje.",
       },

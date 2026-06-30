@@ -1,10 +1,26 @@
 /**
- * Lightweight inline SVG icons (stroke-based, currentColor).
- * Keeps the bundle tiny — no icon library dependency.
+ * Icons for the site — custom inline SVGs for UI chrome, Lucide for feature cards.
  */
 import type { JSX, SVGProps } from "react";
+import type { LucideIcon } from "lucide-react";
+import {
+  AirVent,
+  DatabasePlus,
+  Handshake as HandshakeIcon,
+  PackagePlus as PackagePlusIcon,
+  TabletSmartphone,
+  WifiOff as WifiOffIcon,
+} from "lucide-react";
 
 type IconProps = SVGProps<SVGSVGElement>;
+
+const lucideFeature =
+  (Icon: LucideIcon) =>
+  (p: IconProps) =>
+    <Icon size={24} strokeWidth={1.6} {...p} />;
+
+export const PackagePlus = lucideFeature(PackagePlusIcon);
+export const Handshake = lucideFeature(HandshakeIcon);
 
 const base = (p: IconProps) => ({
   width: 24,
@@ -47,6 +63,46 @@ export const Sparkles = (p: IconProps) => (
   </svg>
 );
 
+export const Lightbulb = (p: IconProps) => (
+  <svg {...base(p)}>
+    <path d="M9 18h6" />
+    <path d="M10 22h4" />
+    <path d="M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z" />
+  </svg>
+);
+
+export const Radiator = (p: IconProps) => (
+  <svg {...base(p)}>
+    <rect x="4" y="4" width="16" height="14" rx="2" />
+    <path d="M8 8v8M12 8v8M16 8v8" />
+    <path d="M6 21h12" />
+  </svg>
+);
+
+export const Unlock = (p: IconProps) => (
+  <svg {...base(p)}>
+    <rect x="5" y="11" width="14" height="10" rx="2" />
+    <path d="M8 11V8a4 4 0 0 1 7.5-1" />
+  </svg>
+);
+
+export const Key = (p: IconProps) => (
+  <svg {...base(p)}>
+    <circle cx="8" cy="8" r="3" />
+    <path d="M11 11l9 9" />
+    <path d="M16 16h3v3" />
+  </svg>
+);
+
+export const Repeat = (p: IconProps) => (
+  <svg {...base(p)}>
+    <path d="m17 2 3 3-3 3" />
+    <path d="M20 5H10a5 5 0 0 0-5 5" />
+    <path d="m7 22-3-3 3-3" />
+    <path d="M4 19h10a5 5 0 0 0 5-5" />
+  </svg>
+);
+
 export const Check = (p: IconProps) => (
   <svg {...base(p)}>
     <path d="m5 12 5 5L20 7" />
@@ -84,7 +140,14 @@ export const Mail = (p: IconProps) => (
   </svg>
 );
 
-const icons = { Shield, Bolt, Sliders, Sparkles } as const;
+export const MapPin = (p: IconProps) => (
+  <svg {...base(p)}>
+    <path d="M12 21s7-4.5 7-11a7 7 0 1 0-14 0c0 6.5 7 11 7 11z" />
+    <circle cx="12" cy="10" r="2.5" />
+  </svg>
+);
+
+const icons = { Shield, Bolt, Sliders, Sparkles, Lightbulb, Radiator, Repeat } as const;
 export type IconName = keyof typeof icons;
 
 /** Render an icon by its lowercase content key (matches home.ts `icon` field). */
@@ -94,6 +157,17 @@ export function FeatureIcon({ name, ...p }: { name: string } & IconProps) {
     bolt: Bolt,
     sliders: Sliders,
     sparkles: Sparkles,
+    lightbulb: Lightbulb,
+    radiator: Radiator,
+    "air-vent": lucideFeature(AirVent),
+    unlock: Unlock,
+    "wifi-off": lucideFeature(WifiOffIcon),
+    key: Key,
+    "database-plus": lucideFeature(DatabasePlus),
+    "package-plus": PackagePlus,
+    handshake: Handshake,
+    "tablet-smartphone": lucideFeature(TabletSmartphone),
+    repeat: Repeat,
   };
   const Cmp = map[name] ?? Sparkles;
   return <Cmp {...p} />;
