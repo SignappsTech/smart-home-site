@@ -6,7 +6,7 @@ import { FinalCta } from "@/components/sections/FinalCta";
 
 export const metadata: Metadata = {
   title: "Funkcionalnosti",
-  description: "Razsvetljava, varnost, ogrevanje in poraba energije — vse v enem pametnem domu.",
+  description: "Razsvetljava, varnost, ogrevanje in poraba energije — v pametnem domu ali pisarni.",
 };
 
 export default function FunkcionalnostiPage() {
@@ -15,7 +15,7 @@ export default function FunkcionalnostiPage() {
     <>
       <PageHeader
         eyebrow="Funkcionalnosti"
-        title="Kaj zna vaš pametni dom"
+        title="Kaj zna vaš pametni dom ali pisarna"
         subtitle={f.intro}
       />
 

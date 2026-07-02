@@ -85,7 +85,7 @@ export function ContactForm() {
 
       <label className="block">
         <span className="mb-1.5 block text-sm font-medium text-mist-200">Sporočilo</span>
-        <textarea name="message" rows={5} required className={field} placeholder="Zanima me pametni dom za…" />
+        <textarea name="message" rows={5} required className={field} placeholder="Zanima me pametna avtomatizacija za…" />
       </label>
 
       {/* honeypot (hidden from users) — FormSubmit discards non-empty _honey */}
