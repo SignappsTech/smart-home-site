@@ -19,7 +19,7 @@ export const homeContent = {
     priceLabel: "Že od",
     price: "2.500 €",
     primaryCta: { label: "Brezplačen posvet in ponudba", href: "/kontakt/" },
-    secondaryCta: { label: "Poglej cenik", href: "#cenik" },
+    secondaryCta: { label: "Poglej cenik", href: "/cenik/" },
     badges: [
       "Brez razbijanja sten",
       "Vgradnja v nekaj dneh",
