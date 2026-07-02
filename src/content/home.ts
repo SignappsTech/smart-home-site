@@ -28,7 +28,11 @@ export const homeContent = {
     ],
   },
 
-  /* honesty: {
+  // NOTE: the <Honesty /> section is currently hidden on the homepage
+  // (its render is commented out in app/page.tsx). This content object is
+  // kept so the Honesty component + its test still typecheck and the section
+  // can be re-enabled with a one-line change. Delete both if it's gone for good.
+  honesty: {
     eyebrow: "Pošteno",
     title: "Pošteno o tem, kaj naredimo v vašem domu",
     intro:
@@ -40,7 +44,7 @@ export const homeContent = {
       "Večino domov zaključimo v 1–2 dneh.",
       "Po vgradnji za seboj pospravimo — dom ostane tak, kot je bil.",
     ],
-  }, */
+  },
 
   trust: {
     title: "Delujemo z napravami, ki jim zaupate",

@@ -13,6 +13,10 @@ export const metadata: Metadata = {
     "Na čem gradimo: odprt in lokalen Home Assistant, naprave Shelly, Sonoff, Aqara in Philips Hue, povezljivost Wi-Fi, Zigbee in Bluetooth (Matter in Thread kmalu). Sistem ostane vaš.",
 };
 
+// Next auto-prefixes <Link> and next/image with basePath, but NOT raw <img>,
+// so build the URL from the exposed basePath (empty in dev).
+const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 export default function TehnologijePage() {
   const t = technologyContent;
   return (
@@ -40,7 +44,7 @@ export default function TehnologijePage() {
         </div>
       </section>
       <div>
-        <img src="/assets/home-assistant-use-logos.svg" alt="Home Assistant ekosistem z logotipi blagovnih znamk" />
+        <img src={`${BASE_PATH}/assets/home-assistant-use-logos.svg`} alt="Home Assistant ekosistem z logotipi blagovnih znamk" />
       </div>
 
       {/* Open / local / yours — the three trust pillars */}

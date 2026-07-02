@@ -10,6 +10,10 @@ export const metadata: Metadata = {
   description: `Spoznajte ${brand.name} — ekipo za sodoben, brezžični pametni dom.`,
 };
 
+// In a static export (`unoptimized: true`), next/image does NOT prepend
+// basePath, so prefix local image sources ourselves (empty in dev).
+const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 const values = [
   {
     icon: Shield,
@@ -163,7 +167,7 @@ export default function ONasPage() {
               <div key={member.name} className="card flex flex-col items-center text-center">
                 <div className="relative mb-4 h-20 w-20 overflow-hidden rounded-full ring-2 ring-brand-400/30">
                   <Image
-                    src={member.image}
+                    src={`${BASE_PATH}${member.image}`}
                     alt={member.name}
                     fill
                     className="object-cover"

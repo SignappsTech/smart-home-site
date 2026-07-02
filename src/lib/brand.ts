@@ -15,8 +15,8 @@ export const brand = {
   domain: "signapps.si",
   url: "https://signapps.si",
   email: "info@signapps.si",
-  phone: "+386 41 000 000", // TODO: real number
-  phoneDisplay: "041 000 000",
+  phone: "+38640975210", // E.164, no spaces — used only in tel: links
+  phoneDisplay: "040 975 210",
   address: "Savska cesta 3a, 1000 Ljubljana",
   addressMapsUrl:
     "https://maps.google.com/?q=Savska+cesta+3a,+1000+Ljubljana",
