@@ -15,7 +15,9 @@ import { ArrowRight } from "@/components/icons";
  * info@signapps.si — click the link in it to start receiving messages. After
  * that, override NEXT_PUBLIC_FORM_ENDPOINT with FormSubmit's scraper-safe alias
  * (https://formsubmit.co/ajax/<alias>) so the address isn't exposed in the JS.
- * A honeypot (_honey) deters basic spam without a paid captcha.
+ *
+ * Spam is filtered by FormSubmit's built-in protection (applied server-side
+ * over AJAX, so there's no visible challenge) plus a hidden honeypot (_honey).
  */
 const ENDPOINT =
   process.env.NEXT_PUBLIC_FORM_ENDPOINT ??
@@ -40,9 +42,11 @@ export function ContactForm() {
     }
 
     // FormSubmit control fields (underscore-prefixed → kept out of the email body).
+    // We deliberately DON'T send _captcha=false, so FormSubmit's built-in spam
+    // protection stays enabled (server-side over AJAX — no visible challenge;
+    // a visible reCAPTCHA would require FormSubmit's non-AJAX redirect flow).
     data.append("_subject", "Novo povpraševanje — signapps.si");
     data.append("_template", "table");
-    data.append("_captcha", "false");
 
     setStatus("sending");
     try {
