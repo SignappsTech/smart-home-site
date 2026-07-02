@@ -138,7 +138,7 @@ describe("T-1: sections render from props", () => {
   it("FinalCta: default + override", () => {
     render(<FinalCta />);
     expect(
-      screen.getByText("Pametni dom za vsak dom — že danes"),
+      screen.getByText("Pametna avtomatizacija za dom in pisarno — že danes"),
     ).toBeInTheDocument();
     cleanup();
 

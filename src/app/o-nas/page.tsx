@@ -7,8 +7,12 @@ import { FinalCta } from "@/components/sections/FinalCta";
 
 export const metadata: Metadata = {
   title: "O nas",
-  description: `Spoznajte ${brand.name} — ekipo za sodoben, brezžični pametni dom.`,
+  description: `Spoznajte ${brand.name} — ekipo za brezžično avtomatizacijo domov in poslovnih prostorov.`,
 };
+
+// In a static export (`unoptimized: true`), next/image does NOT prepend
+// basePath, so prefix local image sources ourselves (empty in dev).
+const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 const values = [
   {
@@ -19,7 +23,7 @@ const values = [
   {
     icon: Bolt,
     title: "Brez nepotrebnih posegov",
-    text: "Brezžične rešitve pomenijo hitro namestitev brez razbijanja sten in dragih gradbenih del.",
+    text: "Brezžične rešitve pomenijo hitro namestitev brez razbijanja sten in dragih gradbenih del — tako v stanovanju kot v poslovnem prostoru.",
   },
   {
     icon: Sparkles,
@@ -85,7 +89,7 @@ export default function ONasPage() {
       <PageHeader
         eyebrow="O nas"
         title={`Zakaj ${brand.name}`}
-        subtitle={`Pametni dom mora biti preprost, odprt in dostopen — ne zapleten projekt za izbrane.`}
+        subtitle={`Pametni dom in pisarna morata biti preprosta, odprta in dostopna — ne zapleten projekt za izbrane.`}
       >
         <div className="mt-10 grid gap-5 text-left sm:mt-12 sm:grid-cols-3">
           {values.map(({ icon: Icon, title, text }) => (
@@ -115,9 +119,9 @@ export default function ONasPage() {
                   Smo mlada, a izkušena ekipa inženirjev in sistemskih
                   integratorjev.
                 </strong>{" "}
-                Specializirani smo za brezžično avtomatizacijo doma na osnovi
-                Home Assistant — odprti platformi, ki združuje naprave različnih
-                proizvajalcev brez vezanosti na enega ponudnika.
+                Specializirani smo za brezžično avtomatizacijo domov in poslovnih
+                prostorov na osnovi Home Assistant — odprti platformi, ki združuje
+                naprave različnih proizvajalcev brez vezanosti na enega ponudnika.
               </p>
               <p>
                 S ponosom stojimo za svojim delom in veliko pozornost namenjamo
@@ -129,7 +133,9 @@ export default function ONasPage() {
               <p>
                 Pokrivamo celoten spekter pametnega doma: upravljanje
                 razsvetljave, ogrevanja in hlajenja, varnostnih sistemov,
-                senčil, vtičnic in energetske porabe — vse v eni aplikaciji,
+                senčil, vtičnic in energetske porabe — pa tudi pisarniških
+                prostorov: razsvetljava in HVAC po urniku, zaznavanje
+                zasedenosti in dostopna kontrola. Vse v eni aplikaciji,
                 dostopni od kjerkoli.
               </p>
               <p>
@@ -163,7 +169,7 @@ export default function ONasPage() {
               <div key={member.name} className="card flex flex-col items-center text-center">
                 <div className="relative mb-4 h-20 w-20 overflow-hidden rounded-full ring-2 ring-brand-400/30">
                   <Image
-                    src={member.image}
+                    src={`${BASE_PATH}${member.image}`}
                     alt={member.name}
                     fill
                     className="object-cover"

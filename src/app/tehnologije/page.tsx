@@ -10,7 +10,7 @@ import { ecosystem } from "@/lib/brand";
 export const metadata: Metadata = {
   title: "Tehnologije",
   description:
-    "Na čem gradimo: odprt in lokalen Home Assistant, naprave Shelly, Sonoff, Aqara in Philips Hue, povezljivost Wi-Fi, Zigbee in Bluetooth (Matter in Thread kmalu). Sistem ostane vaš.",
+    "Na čem gradimo: odprt in lokalen Home Assistant, naprave Shelly, Sonoff, Aqara in Philips Hue, povezljivost Wi-Fi, Zigbee in Bluetooth (Matter in Thread kmalu). Sistem ostane vaš. Enaka arhitektura deluje v domovih in poslovnih prostorih.",
 };
 
 export default function TehnologijePage() {
@@ -19,7 +19,7 @@ export default function TehnologijePage() {
     <>
       <PageHeader
         eyebrow="Tehnologije"
-        title="Na čem gradimo vaš pametni dom"
+        title="Na čem gradimo vaš pametni dom ali pisarno"
         subtitle={t.intro}
       />
 
@@ -39,9 +39,6 @@ export default function TehnologijePage() {
           </div>
         </div>
       </section>
-      <div>
-        <img src="/assets/home-assistant-use-logos.svg" alt="Home Assistant ekosistem z logotipi blagovnih znamk" />
-      </div>
 
       {/* Open / local / yours — the three trust pillars */}
       <section className="section bg-ink-900/40">

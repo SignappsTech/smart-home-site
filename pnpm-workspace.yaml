@@ -1,6 +1,17 @@
 packages:
   - .
 
-# Dependencies allowed to run install/build scripts (pnpm's build approval).
+# Native deps allowed to run install/build scripts. This environment's pnpm
+# supply-chain wrapper (local + CI) approves builds via `allowBuilds` (a map),
+# and makes any UNapproved build script a hard `ERR_PNPM_IGNORED_BUILDS` error.
+# `onlyBuiltDependencies` is the standard-pnpm equivalent, kept in sync so the
+# approval also works with vanilla pnpm. Add new build-script packages to BOTH.
+allowBuilds:
+  esbuild: true
+  sharp: true
+  unrs-resolver: true
+
 onlyBuiltDependencies:
   - esbuild
+  - sharp
+  - unrs-resolver
