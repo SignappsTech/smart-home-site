@@ -11,13 +11,13 @@
  */
 export const technologyContent = {
   intro:
-    "Pod pokrovom je odprt, lokalen sistem, ki ga imate v lasti. Tukaj pošteno razložimo, na čem gradimo, kako naprave komunicirajo in zakaj niste vezani na nas ali na enega proizvajalca.",
+    "Pod pokrovom je odprt, lokalen sistem za dom ali poslovni prostor, ki ga imate v lasti. Tukaj pošteno razložimo, na čem gradimo, kako naprave komunicirajo in zakaj niste vezani na nas ali na enega proizvajalca.",
 
   // The open, local hub — the heart of the pitch for the technical buyer.
   hub: {
     eyebrow: "Nadzorni center",
     title: "Home Assistant — odprt in lokalen",
-    text: "Srce sistema je Home Assistant, odprtokodna platforma, ki teče lokalno v vašem domu. Naprave različnih proizvajalcev poveže pod eno streho, brez obvezne oblačne storitve in brez naročnine.",
+    text: "Srce sistema je Home Assistant, odprtokodna platforma, ki teče lokalno v vašem domu ali pisarni. Naprave različnih proizvajalcev poveže pod eno streho, brez obvezne oblačne storitve in brez naročnine.",
   },
 
   // Engineer trust levers (from the persona panel): open · local · you own it.
@@ -46,7 +46,7 @@ export const technologyContent = {
   brands: {
     eyebrow: "Naprave",
     title: "Znamke, ki jih povezujemo",
-    text: "Združljive, preverjene naprave vodilnih proizvajalcev — izberemo prave za vaš dom in proračun.",
+    text: "Združljive, preverjene naprave vodilnih proizvajalcev — izberemo prave glede na tip prostora (stanovanje, hiša, pisarna) in proračun.",
   },
 
   connectivity: {
@@ -70,7 +70,7 @@ export const technologyContent = {
     points: [
       "Releje (npr. Shelly) vgradimo v obstoječo napeljavo — za stikala in v elektro omarico. Edini električni poseg, brez razbijanja sten.",
       "Električni del opravi usposobljen monter po veljavnih standardih, z računom in garancijo.",
-      "Naprave izberemo glede na vaš dom in proračun — pred nakupom svetujemo, kaj je združljivo in se splača.",
+      "Naprave izberemo glede na vaš prostor (dom ali pisarno) in proračun — pred nakupom svetujemo, kaj je združljivo in se splača.",
       "Po vgradnji vam pokažemo uporabo in ostajamo na voljo za podporo — za vsakodnevno delovanje pa niste odvisni od nas.",
     ],
   },

@@ -6,7 +6,7 @@ import { Phone, Mail, MapPin } from "@/components/icons";
 
 export const metadata: Metadata = {
   title: "Kontakt",
-  description: "Stopite v stik za brezplačen posvet o pametnem domu.",
+  description: "Stopite v stik za brezplačen posvet o pametnem domu ali pisarni.",
 };
 
 export default function KontaktPage() {
@@ -15,7 +15,7 @@ export default function KontaktPage() {
       <PageHeader
         eyebrow="Kontakt"
         title="Stopite v stik z nami"
-        subtitle="Brezplačen posvet in ponudba po meri vašega doma — brez obveznosti."
+        subtitle="Brezplačen posvet in ponudba po meri vašega doma ali poslovnega prostora — brez obveznosti."
       />
 
       <section className="section">

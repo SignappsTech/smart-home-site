@@ -11,7 +11,7 @@
 export const brand = {
   name: "Signapps",
   // Shown after the name in some lockups, e.g. "Signapps — pametni dom".
-  tagline: "pametni dom",
+  tagline: "pametni dom in pisarna",
   domain: "signapps.si",
   url: "https://signapps.si",
   email: "info@signapps.si",
@@ -25,9 +25,9 @@ export const brand = {
   lang: "sl",
   // Default OpenGraph / SEO copy (Slovenian).
   seo: {
-    title: "Signapps — pametni dom brez razbijanja sten",
+    title: "Signapps — pametni dom in pisarna brez razbijanja sten",
     description:
-      "Pametni dom na osnovi Home Assistant: Shelly, Sonoff, Aqara in Philips Hue v eni aplikaciji. Brezžično z minimalnimi električnimi posegi, brez razbijanja sten, vgradnja v nekaj dneh. Matter kmalu.",
+      "Pametni dom na osnovi Home Assistant: Shelly, Sonoff, Aqara in Philips Hue v eni aplikaciji. Brezžično z minimalnimi električnimi posegi, brez razbijanja sten, vgradnja v nekaj dneh. Matter kmalu. Rešitve za stanovanja, hiše in poslovne prostore.",
   },
   social: {
     instagram: "https://instagram.com/",
@@ -44,7 +44,7 @@ export const brand = {
 export const ecosystem = {
   hub: {
     name: "Home Assistant",
-    role: "Odprt nadzorni center vašega doma — ena aplikacija za vse naprave, brez vezanosti na enega proizvajalca.",
+    role: "Odprt nadzorni center vašega doma ali pisarne — ena aplikacija za vse naprave, brez vezanosti na enega proizvajalca.",
   },
   brands: [
     { name: "Shelly", note: "Releji, meritve porabe, senzorji" },

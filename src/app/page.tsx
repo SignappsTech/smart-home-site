@@ -1,5 +1,5 @@
 import { Hero } from "@/components/sections/Hero";
-import { Pricing } from "@/components/sections/Pricing";
+import { PricingTeaser } from "@/components/sections/PricingTeaser";
 import { Honesty } from "@/components/sections/Honesty";
 import { TrustBar } from "@/components/sections/TrustBar";
 import { Why } from "@/components/sections/Why";
@@ -10,15 +10,16 @@ import { Faq } from "@/components/sections/Faq";
 import { FinalCta } from "@/components/sections/FinalCta";
 
 /**
- * Homepage = quick overview. Cenik stays full; the other deep sections (Why,
- * Comparison, Ecosystem) render as teasers with a "see more →" link to their
- * dedicated subpage. Steps + FAQ have no subpage, so they stay full here.
+ * Homepage = quick overview. Deep sections (Pricing, Why, Comparison,
+ * Ecosystem) render as teasers with a "see more →" link to their dedicated
+ * subpage; the full Cenik lives on /cenik/. Steps + FAQ have no subpage, so
+ * they stay full here.
  */
 export default function HomePage() {
   return (
     <>
       <Hero />
-      <Pricing />
+      <PricingTeaser />
       {/* <Honesty /> */}
       <TrustBar />
       <Why more={{ label: "Vse funkcionalnosti", href: "/funkcionalnosti/" }} />

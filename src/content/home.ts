@@ -12,10 +12,10 @@
 
 export const homeContent = {
   hero: {
-    eyebrow: "Pametni dom · odprt sistem Home Assistant",
-    title: "Pameten dom v vašem domu — brez razbijanja sten",
+    eyebrow: "Pametni dom in pisarna · odprt sistem Home Assistant",
+    title: "Pametna avtomatizacija za dom in pisarno — brez razbijanja sten",
     subtitle:
-      "Luči, senčila, ogrevanje, varnost in poraba — vse v eni aplikaciji. Krmilne module vgradimo v vašo obstoječo napeljavo (minimalni, čisti električni poseg), naprave povežemo brezžično. Hitra vgradnja, brez gradbenih del, brez prahu.",
+      "Luči, senčila, ogrevanje, varnost in poraba — vse v eni aplikaciji. Krmilne module vgradimo v vašo obstoječo napeljavo (minimalni, čisti električni poseg), naprave povežemo brezžično. Hitra vgradnja, brez gradbenih del, brez prahu. Rešitve za stanovanja, hiše in poslovne prostore.",
     priceLabel: "Že od",
     price: "2.500 €",
     primaryCta: { label: "Brezplačen posvet in ponudba", href: "/kontakt/" },
@@ -59,7 +59,7 @@ export const homeContent = {
       {
         icon: "bolt",
         title: "Nižji računi",
-        text: "Avtomatika senčil, ogrevanja in luči ter nadzor porabe znižajo stroške. Na ogledu pošteno povemo, kje prihranek je in kje ga ni.",
+        text: "Avtomatika senčil, ogrevanja in luči ter nadzor porabe znižajo stroške. Na ogledu pošteno povemo, kje prihranek je in kje ga ni. Enako velja za pisarno: HVAC po urniku, samodejni izklop luči in nadzor porabe zmanjšajo poslovne stroške brez posega v infrastrukturo.",
       },
       {
         icon: "tablet-smartphone",
@@ -116,7 +116,7 @@ export const homeContent = {
       {
         n: "01",
         title: "Brezplačen posvet in ogled",
-        text: "Skupaj pregledamo vaše želje in prostor ter pripravimo predlog rešitve in ponudbo — vnaprej in pisno.",
+        text: "Skupaj pregledamo vaše želje in prostor (stanovanje, hiša ali poslovni prostor) ter pripravimo predlog rešitve in ponudbo — vnaprej in pisno.",
       },
       {
         n: "02",
@@ -126,16 +126,42 @@ export const homeContent = {
       {
         n: "03",
         title: "Predaja in podpora",
-        text: "Pokažemo vam uporabo, nastavimo prizore in avtomatizacije po meri ter ostanemo na voljo za podporo.",
+        text: "Pokažemo vam uporabo, nastavimo prizore in avtomatizacije po meri ter ostanemo na voljo za podporo — za dom ali ekipo v pisarni.",
       },
     ],
+  },
+
+  pricingTeaser: {
+    eyebrow: "Cenik",
+    title: "Trije paketi — od hitre rešitve do doma po meri",
+    subtitle:
+      "Pametni dom lahko naredimo hitro in ugodno, ali pa si vzamemo čas in ga skrojimo povsem po vas. Vsi paketi vključujejo brezplačen posvet in ogled lokacije, vgradnjo z minimalnim, čistim električnim posegom in 24-mesečno garancijo. Pakete prilagodimo stanovanjem, hišam in poslovnim prostorom.",
+    packages: [
+      {
+        name: "Osnovni",
+        tagline: "Hitro in preprosto",
+        text: "Za tiste, ki želijo pametne ključne stvari v enem ali dveh prostorih — brez odvečnega zapletanja.",
+      },
+      {
+        name: "Napredni",
+        tagline: "Celovit pameten dom",
+        text: "Za celotno stanovanje ali manjšo hišo — z ogrevanjem, varnostjo in avtomatizacijami po meri.",
+      },
+      {
+        name: "Premium",
+        tagline: "Po meri, do potankosti",
+        text: "Za večje in zahtevnejše domove — rešitev popolnoma po meri, brez vnaprej določenega obsega.",
+      },
+    ],
+    note: "Točno ponudbo pripravimo po brezplačnem posvetu in ogledu — vnaprej in pisno. Brez skritih stroškov, brez naročnine, strojno opremo imate v lasti. Delamo za stanovanja, hiše in pisarne.",
+    cta: { label: "Poglej celoten cenik", href: "/cenik/" },
   },
 
   pricing: {
     eyebrow: "Cenik",
     title: "Trije paketi — od hitre rešitve do doma po meri",
     subtitle:
-      "Pametni dom lahko naredimo hitro in ugodno, ali pa si vzamemo čas in ga skrojimo povsem po vas. Vsi paketi vključujejo brezplačen posvet in ogled lokacije, vgradnjo z minimalnim, čistim električnim posegom in 24-mesečno garancijo.",
+      "Pametni dom lahko naredimo hitro in ugodno, ali pa si vzamemo čas in ga skrojimo povsem po vas. Vsi paketi vključujejo brezplačen posvet in ogled lokacije, vgradnjo z minimalnim, čistim električnim posegom in 24-mesečno garancijo. Pakete prilagodimo stanovanjem, hišam in poslovnim prostorom.",
     tiers: [
       {
         name: "Osnovni",
@@ -196,7 +222,7 @@ export const homeContent = {
         cta: { label: "Dogovori se za posvet", href: "/kontakt/" },
       },
     ],
-    note: "Cene so okvirne in odvisne od velikosti doma ter števila naprav. Točno ponudbo pripravimo po brezplačnem posvetu in ogledu lokacije — vnaprej in pisno. Brez skritih stroškov, brez naročnine, strojno opremo imate v lasti. Začnete lahko manjše in sistem kadar koli razširite, saj ponujamo tudi nadgradnje obstoječih sistemov.",
+    note: "Cene so okvirne in odvisne od velikosti doma ter števila naprav. Točno ponudbo pripravimo po brezplačnem posvetu in ogledu lokacije — vnaprej in pisno. Brez skritih stroškov, brez naročnine, strojno opremo imate v lasti. Začnete lahko manjše in sistem kadar koli razširite, saj ponujamo tudi nadgradnje obstoječih sistemov. Delamo za stanovanja, hiše in pisarne.",
   },
 
   faq: {
@@ -235,13 +261,17 @@ export const homeContent = {
         q: "Koliko časa traja vgradnja?",
         a: "Čas vgradnje je odvisen od vaših želja. Manjši projekti so lahko končani v nekaj dneh, večji pa v nekaj tednih.",
       },
+      {
+        q: "Ali avtomatizirate tudi pisarne ali poslovne prostore?",
+        a: "Da. Isti odprt sistem (Home Assistant) postavimo v pisarne, sejne sobe in manjše poslovne prostore — upravljanje razsvetljave po urniku, HVAC glede na zasedenost, dostopna kontrola in nadzor porabe. Brezplačen posvet je prvi korak.",
+      },
     ],
   },
 
   finalCta: {
-    title: "Pametni dom za vsak dom — že danes",
+    title: "Pametna avtomatizacija za dom in pisarno — že danes",
     subtitle:
-      "Rezervirajte brezplačen posvet, da pripravimo rešitev po meri vašega doma.",
+      "Rezervirajte brezplačen posvet, da pripravimo rešitev po meri vašega doma ali poslovnega prostora.",
     cta: { label: "Brezplačen posvet in ponudba", href: "/kontakt/" },
   },
 } as const;
