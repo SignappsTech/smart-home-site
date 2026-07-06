@@ -35,6 +35,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang={brand.lang} className={inter.variable}>
+      <head>
+        <link rel="icon" type="image/x-icon" href="/assets/blue/CGP_signapps_light_rounded_whiteS.ico" />
+      </head>
       <body className="min-h-screen bg-ink-950">
         <Header />
         <main>{children}</main>
