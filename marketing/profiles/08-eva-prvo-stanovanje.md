@@ -24,7 +24,7 @@ dobro izkušnjo pozneje preraste v Napredni.
 
 ## Kaj jo pritegne
 - **Osnovni paket od 2.000 € — »hitro in preprosto«, vgradnja v ~1 dan**
-- **Brez razbijanja sten, brez prahu, za seboj pospravimo** (ključno za najem)
+- **Brez razbijanja sten, za seboj pospravimo** (ključno za najem)
 - **Scene in pametna razsvetljava** (Philips Hue) — vizualno privlačno
 - **Vse v eni aplikaciji, brez naročnine, strojno opremo imate v lasti**
 - **Začnite manjše, razširite kadar koli** — nič ni dokončnega

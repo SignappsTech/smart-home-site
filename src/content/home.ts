@@ -15,7 +15,7 @@ export const homeContent = {
     eyebrow: "Pametni dom in pisarna · odprt sistem Home Assistant",
     title: "Pametna avtomatizacija za dom in pisarno — brez razbijanja sten",
     subtitle:
-      "Luči, senčila, ogrevanje, varnost in poraba — vse v eni aplikaciji. Krmilne module vgradimo v vašo obstoječo napeljavo (minimalni, čisti električni poseg), naprave povežemo brezžično. Hitra vgradnja, brez gradbenih del, brez prahu. Rešitve za stanovanja, hiše in poslovne prostore.",
+      "Luči, senčila, ogrevanje, varnost in poraba — vse v eni aplikaciji. Krmilne module vgradimo v vašo obstoječo napeljavo (minimalni, čisti električni poseg), naprave povežemo brezžično. Hitra vgradnja, brez invazivnih gradbenih del. Rešitve za stanovanja, hiše in poslovne prostore.",
     priceLabel: "Že od",
     price: "2.500 €",
     primaryCta: { label: "Brezplačen posvet in ponudba", href: "/kontakt/" },
@@ -39,9 +39,9 @@ export const homeContent = {
       "Pametni dom ne nastane »iz zraka«. Da luči, vtičnice in senčila postanejo pametni, usposobljen elektro-monter vgradi releje (npr. Shelly) v vašo obstoječo napeljavo — za stikala in v elektro omarico. To je edini električni poseg.",
     leadIn: "Kaj to pomeni za vas:",
     points: [
-      "Brez razbijanja sten, brez dolbenja, brez prahu.",
+      "Brez razbijanja sten, brez dolbenja.",
       "Posege opravi usposobljen monter — po standardih, z računom in garancijo.",
-      "Večino domov zaključimo v 1–2 dneh.",
+      "Večino domov zaključimo v nekaj dneh.",
       "Po vgradnji za seboj pospravimo — dom ostane tak, kot je bil.",
     ],
   },
@@ -125,7 +125,7 @@ export const homeContent = {
       {
         n: "02",
         title: "Vgradnja v nekaj dneh",
-        text: "Naprave povežemo brezžično, krmilne module vgradimo z minimalnim, čistim električnim posegom — brez gradbenih del, brez prahu.",
+        text: "Naprave povežemo brezžično, krmilne module vgradimo z minimalnim, čistim električnim posegom — brez invazivnih gradbenih del.",
       },
       {
         n: "03",
@@ -235,7 +235,7 @@ export const homeContent = {
     items: [
       {
         q: "Ali morate razbijati stene ali posegati v napeljavo?",
-        a: "Sten ne razbijamo in gradbenih del ni. Je pa potreben minimalen električni poseg: usposobljen elektro-monter vgradi krmilne module (releje) v vašo obstoječo napeljavo — za stikala in v elektro omarico. Čisto, hitro, z garancijo in računom.",
+        a: "Sten ne razbijamo in invazivnih gradbenih del ni. Je pa potreben minimalen električni poseg: usposobljen elektro-monter vgradi krmilne module (releje) v vašo obstoječo napeljavo — za stikala in v elektro omarico. Čisto, hitro, z garancijo in računom.",
       },
       {
         q: "Kdo opravi električna dela in ali je varno?",

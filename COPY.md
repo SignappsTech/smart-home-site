@@ -27,15 +27,15 @@ This is the single biggest trust lever you have. Lead with it.
 > **A truly intelligent home — without tearing apart the one you have.**
 
 Alternatives (SL):
-- Inteligenca žičnega sistema, brez gradbenih del.
-- Vaš dom postane pameten v 1–2 dneh. Brez prahu. Brez vezanosti.
+- Inteligenca žičnega sistema, brez invazivnih gradbenih del.
+- Vaš dom postane pameten v nekaj dneh. Brez vezanosti.
 - En sistem. Ena aplikacija. Vaš dom — končno povezan.
 - Pametni dom, ki ostane vaš. Odprt sistem na osnovi Home Assistant.
 
 Sub-headline (SL):
 > Celovita rešitev pametnega doma na osnovi Home Assistant — luči, ogrevanje, senčila,
 > varnost in poraba v eni aplikaciji. Naprave namestimo brezžično; releje vgradimo v
-> vašo obstoječo napeljavo z minimalnimi, čistimi posegi. Brez gradbenih del, brez prahu.
+> vašo obstoječo napeljavo z minimalnimi, čistimi posegi. Brez invazivnih gradbenih del.
 
 ---
 
@@ -49,14 +49,14 @@ Sub-headline (SL):
 **Subtitle (SL):**
 > Luči, senčila, ogrevanje, varnost in poraba — vse v eni aplikaciji. Releje vgradimo v
 > vašo obstoječo napeljavo (minimalni, čisti električni poseg), naprave povežemo
-> brezžično. Brez gradbenih del, brez prahu, namestitev v 1–2 dneh.
+> brezžično. Brez invazivnih gradbenih del, namestitev v 1–2 dneh.
 
 **Badges:** `Brez razbijanja sten` · `Vgradnja v 1–2 dneh` · `Odprt sistem — vaš ostane vaš` · `24-mesečna garancija`
 
 **Primary CTA:** Brezplačen ogled in ponudba
 **Secondary CTA:** Kako poteka
 
-> ⚠️ **Removed from old hero:** the badge "Brez gradbenih del" is fine, but the old
+> ⚠️ **Removed from old hero:** the badge "Brez invazivnih gradbenih del" is fine, but the old
 > `seo.title` "**brez posegov v inštalacije**" must change — see §9.
 
 ---
@@ -72,7 +72,7 @@ This block converts skeptics. All 5 personas reacted strongly to it.
 > za stikala in v elektro omarico. To je edini električni poseg.
 >
 > **Kaj to pomeni za vas:**
-> - ✅ **Brez razbijanja sten, brez dolbenja, brez prahu.**
+> - ✅ **Brez razbijanja sten, brez dolbenja.**
 > - ✅ Posege opravi **usposobljen monter**, po standardih, z računom in garancijo.
 > - ✅ Večino domov zaključimo v **1–2 dneh**.
 > - ✅ Po vgradnji za seboj **pospravimo** — dom ostane tak, kot je bil.
@@ -92,14 +92,14 @@ Compete on: _your walls are already closed_ + _open vs. locked-in_.
 
 **SL headline:** Inteligenca žičnega sistema — brez prenove končanega doma.
 
-| | **Signapps (brezžično + minimalni poseg)** | **Klasični žični sistem (KNX/Loxone)** |
-|---|---|---|
-| Posegi v dom | Releji v obstoječo napeljavo, brez razbijanja sten | Nova ožičenja, dolbenje, gradbena dela |
-| Primeren za | Že zgrajen / opremljen dom | Le med gradnjo ali prenovo |
-| Čas vgradnje | 1–2 dni | Tedni |
-| Sistem | **Odprt** (Home Assistant) — poljubne znamke, nove standarde dodajate | Zaprt, vezan na enega proizvajalca |
-| Nadgradnja | Razširljiv — nove naprave za vas dodamo in nastavimo, kadar koli | Drag poseg specialista |
-| Lastništvo | **Sistem ostane vaš** — poln dostop, brez vezanosti | Vezani na vgraditelja |
+|              | **Signapps (brezžično + minimalni poseg)**                            | **Klasični žični sistem (KNX/Loxone)** |
+| ------------ | --------------------------------------------------------------------- | -------------------------------------- |
+| Posegi v dom | Releji v obstoječo napeljavo, brez razbijanja sten                    | Nova ožičenja, dolbenje, gradbena dela |
+| Primeren za  | Že zgrajen / opremljen dom                                            | Le med gradnjo ali prenovo             |
+| Čas vgradnje | 1–2 dni                                                               | Tedni                                  |
+| Sistem       | **Odprt** (Home Assistant) — poljubne znamke, nove standarde dodajate | Zaprt, vezan na enega proizvajalca     |
+| Nadgradnja   | Razširljiv — nove naprave za vas dodamo in nastavimo, kadar koli      | Drag poseg specialista                 |
+| Lastništvo   | **Sistem ostane vaš** — poln dostop, brez vezanosti                   | Vezani na vgraditelja                  |
 
 **The line that lands (premium persona):**
 > Ni vam treba izbirati med **lepo dokončanim** in **resnično pametnim** domom.
