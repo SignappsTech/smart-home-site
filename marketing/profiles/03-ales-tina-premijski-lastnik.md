@@ -16,7 +16,7 @@ obravnavo, diskretnost in brezhibno izvedbo — kot pri vsakem premijskem ponudn
 ki ga najameta.
 
 ## Kaj si želita
-- Inteligenco doma **brez gradbenih del v končanem prostoru**
+- Inteligenco doma **brez invazivnih gradbenih del v končanem prostoru**
 - Estetsko dovršeno rešitev — diskretni elementi, lepa nadzorna plošča, nič »tehničnega panela«
 - Celostno izvedbo po meri: svetovanje, zasnova, integracija (multimedija, klima, kamere, vrata)
 - En zaupanja vreden sogovornik in dolgoročna podpora
