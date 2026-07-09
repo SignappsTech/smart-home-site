@@ -77,10 +77,23 @@ const config: Config = {
           "0%": { opacity: "0", transform: "translateY(16px)" },
           "100%": { opacity: "1", transform: "translateY(0)" },
         },
+        // /dozivetje: overhead lamp gently "breathes" (subtle intensity drift)
+        "lamp-breathe": {
+          "0%, 100%": { opacity: "0.85", transform: "translateX(-50%) scale(1)" },
+          "50%": { opacity: "1", transform: "translateX(-50%) scale(1.04)" },
+        },
+        // /dozivetje: scroll-cue dot drifts down inside the mouse outline
+        "scroll-cue": {
+          "0%": { opacity: "0", transform: "translateY(0)" },
+          "40%": { opacity: "1" },
+          "100%": { opacity: "0", transform: "translateY(10px)" },
+        },
       },
       animation: {
         floaty: "floaty 6s ease-in-out infinite",
         "fade-up": "fade-up 0.6s ease-out both",
+        "lamp-breathe": "lamp-breathe 7s ease-in-out infinite",
+        "scroll-cue": "scroll-cue 1.8s ease-in-out infinite",
       },
     },
   },

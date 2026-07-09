@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { brand } from "@/lib/brand";
 import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
+import { SiteFooter } from "@/components/SiteFooter";
 
 const inter = Inter({
   subsets: ["latin", "latin-ext"], // latin-ext covers Slovenian č/š/ž
@@ -41,7 +41,7 @@ export default function RootLayout({
       <body className="min-h-screen bg-ink-950">
         <Header />
         <main>{children}</main>
-        <Footer />
+        <SiteFooter />
       </body>
     </html>
   );
