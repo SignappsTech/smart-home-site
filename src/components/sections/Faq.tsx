@@ -13,8 +13,7 @@ export function Faq(props: Partial<FaqProps> = {}) {
     <section id="faq" className="section bg-ink-900/40">
       <div className="container-x">
         <div className="mx-auto max-w-2xl text-center">
-          <span className="eyebrow">{f.eyebrow}</span>
-          <h2 className="mt-4 text-3xl font-bold sm:text-4xl">{f.title}</h2>
+          <h2 className="text-3xl font-bold sm:text-4xl">{f.title}</h2>
         </div>
 
         <div className="mx-auto mt-12 max-w-3xl divide-y divide-white/10 overflow-hidden rounded-3xl border border-white/10 bg-white/[0.02]">
@@ -23,14 +22,16 @@ export function Faq(props: Partial<FaqProps> = {}) {
             return (
               <div key={item.q}>
                 <button
-                  className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left"
+                  className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left transition-colors hover:bg-white/[0.02] focus:outline-none focus-visible:bg-white/[0.03] focus-visible:ring-1 focus-visible:ring-inset focus-visible:ring-brand-400/40"
                   aria-expanded={isOpen}
                   onClick={() => setOpen(isOpen ? null : i)}
                 >
                   <span className="font-medium text-white">{item.q}</span>
                   <span
-                    className={`grid h-7 w-7 shrink-0 place-items-center rounded-full border border-white/15 text-brand-300 transition-transform ${
-                      isOpen ? "rotate-45" : ""
+                    className={`grid h-7 w-7 shrink-0 place-items-center rounded-full border transition-[transform,border-color,color] duration-200 ${
+                      isOpen
+                        ? "rotate-45 border-brand-400/50 text-brand-200"
+                        : "border-white/15 text-brand-300"
                     }`}
                     aria-hidden
                   >

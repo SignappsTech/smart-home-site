@@ -28,21 +28,16 @@ export const homeContent = {
     ],
   },
 
-  // NOTE: the <Honesty /> section is currently hidden on the homepage
-  // (its render is commented out in app/page.tsx). This content object is
-  // kept so the Honesty component + its test still typecheck and the section
-  // can be re-enabled with a one-line change. Delete both if it's gone for good.
   honesty: {
-    eyebrow: "Pošteno",
     title: "Pošteno o tem, kaj naredimo v vašem domu",
     intro:
-      "Pametni dom ne nastane »iz zraka«. Da luči, vtičnice in senčila postanejo pametni, usposobljen elektro-monter vgradi releje (npr. Shelly) v vašo obstoječo napeljavo — za stikala in v elektro omarico. To je edini električni poseg.",
+      "Pametni dom ne nastane »iz zraka«. Da luči, vtičnice in senčila postanejo pametni, usposobljen elektro-monter vgradi releje (npr. Shelly) v vašo obstoječo napeljavo, za stikala in v elektro omarico. To je edini električni poseg.",
     leadIn: "Kaj to pomeni za vas:",
     points: [
       "Brez razbijanja sten, brez dolbenja.",
-      "Posege opravi usposobljen monter — po standardih, z računom in garancijo.",
+      "Posege opravi usposobljen monter, po standardih, z računom in garancijo.",
       "Večino domov zaključimo v nekaj dneh.",
-      "Po vgradnji za seboj pospravimo — dom ostane tak, kot je bil.",
+      "Po vgradnji za seboj pospravimo, dom ostane tak, kot je bil.",
     ],
   },
 
@@ -52,7 +47,6 @@ export const homeContent = {
   },
 
   why: {
-    eyebrow: "Zakaj pametni dom",
     title: "Kaj se spremeni v vašem vsakdanu",
     items: [
       {
@@ -79,18 +73,17 @@ export const homeContent = {
   },
 
   comparison: {
-    eyebrow: "Brezžično vs. žično",
     title: "Inteligenca žičnega sistema — brez prenove končanega doma",
     footnote: "Ni vam treba izbirati med lepo dokončanim in resnično pametnim domom.",
     wireless: {
       label: "Signapps — brezžično z minimalnim posegom",
       points: [
-        "Releji v obstoječo napeljavo — brez razbijanja sten",
+        "Releji v obstoječo napeljavo, brez razbijanja sten",
         "Primeren za že zgrajen ali opremljen dom",
         "Vgradnja v 1–2 dni",
-        "Odprt sistem (Home Assistant) — poljubne znamke",
-        "Razširljiv — nove naprave za vas dodamo in nastavimo, kadar koli",
-        "Sistem ostane vaš — brez vezanosti",
+        "Odprt sistem (Home Assistant): poljubne znamke",
+        "Razširljiv: nove naprave za vas dodamo in nastavimo, kadar koli",
+        "Sistem ostane vaš, brez vezanosti",
       ],
     },
     wired: {
@@ -107,30 +100,28 @@ export const homeContent = {
   },
 
   ecosystem: {
-    eyebrow: "Tehnologija",
     title: "Odprt sistem, zgrajen na Home Assistant",
     subtitle:
-      "Home Assistant je odprt nadzorni center vašega doma. Povezuje naprave vodilnih znamk prek Wi-Fi, Zigbee in Bluetooth LE — Matter in Thread sta v pripravi.",
+      "Home Assistant je odprt nadzorni center vašega doma. Povezuje naprave vodilnih znamk prek Wi-Fi, Zigbee in Bluetooth LE. Matter in Thread sta v pripravi.",
   },
 
   steps: {
-    eyebrow: "Kako poteka",
     title: "V 3 korakih do pametnega doma",
     items: [
       {
         n: "01",
         title: "Brezplačen posvet in ogled",
-        text: "Skupaj pregledamo vaše želje in prostor (stanovanje, hiša ali poslovni prostor) ter pripravimo predlog rešitve in ponudbo — vnaprej in pisno.",
+        text: "Skupaj pregledamo vaše želje in prostor (stanovanje, hiša ali poslovni prostor) ter pripravimo predlog rešitve in ponudbo, vnaprej in pisno.",
       },
       {
         n: "02",
         title: "Vgradnja v nekaj dneh",
-        text: "Naprave povežemo brezžično, krmilne module vgradimo z minimalnim, čistim električnim posegom — brez invazivnih gradbenih del.",
+        text: "Naprave povežemo brezžično, krmilne module vgradimo z minimalnim, čistim električnim posegom, brez invazivnih gradbenih del.",
       },
       {
         n: "03",
         title: "Predaja in podpora",
-        text: "Pokažemo vam uporabo, nastavimo prizore in avtomatizacije po meri ter ostanemo na voljo za podporo — za dom ali ekipo v pisarni.",
+        text: "Pokažemo vam uporabo, nastavimo prizore in avtomatizacije po meri ter ostanemo na voljo za podporo, za dom ali ekipo v pisarni.",
       },
     ],
   },
@@ -144,20 +135,20 @@ export const homeContent = {
       {
         name: "Osnovni",
         tagline: "Hitro in preprosto",
-        text: "Za tiste, ki želijo pametne ključne stvari v enem ali dveh prostorih — brez odvečnega zapletanja.",
+        text: "Za tiste, ki želijo pametne ključne stvari v enem ali dveh prostorih, brez odvečnega zapletanja.",
       },
       {
         name: "Napredni",
         tagline: "Celovit pameten dom",
-        text: "Za celotno stanovanje ali manjšo hišo — z ogrevanjem, varnostjo in avtomatizacijami po meri.",
+        text: "Za celotno stanovanje ali manjšo hišo, z ogrevanjem, varnostjo in avtomatizacijami po meri.",
       },
       {
         name: "Premium",
         tagline: "Po meri, do potankosti",
-        text: "Za večje in zahtevnejše domove — rešitev popolnoma po meri, brez vnaprej določenega obsega.",
+        text: "Za večje in zahtevnejše domove: rešitev popolnoma po meri, brez vnaprej določenega obsega.",
       },
     ],
-    note: "Točno ponudbo pripravimo po brezplačnem posvetu in ogledu — vnaprej in pisno. Brez skritih stroškov, brez naročnine, strojno opremo imate v lasti. Delamo za stanovanja, hiše in pisarne.",
+    note: "Točno ponudbo pripravimo po brezplačnem posvetu in ogledu, vnaprej in pisno. Brez skritih stroškov, brez naročnine, strojno opremo imate v lasti. Delamo za stanovanja, hiše in pisarne.",
     cta: { label: "Poglej celoten cenik", href: "/cenik/" },
   },
 
@@ -215,27 +206,26 @@ export const homeContent = {
         priceNote: "izvedba po dogovoru",
         features: [
           "Vse v naprednem paketu",
-          "Povsem prilagodljivo — rešitev zasnujemo od začetka, po vaših željah",
+          "Povsem prilagodljivo: rešitev zasnujemo od začetka, po vaših željah",
           "Napredne avtomatike in prizori po meri",
           "Integracija dodatnih sistemov (multimedija, klima, vrata, kamere)",
           "Fazna izvedba in usklajevanje z izvajalci",
           "Osebni stik in dolgoročna podpora",
         ],
-        example: "Brez vnaprej določenega obsega — vse skrojimo po vašem domu in željah.",
+        example: "Brez vnaprej določenega obsega, vse skrojimo po vašem domu in željah.",
         featured: false,
         cta: { label: "Dogovori se za posvet", href: "/kontakt/" },
       },
     ],
-    note: "Cene so okvirne in odvisne od velikosti doma ter števila naprav. Točno ponudbo pripravimo po brezplačnem posvetu in ogledu lokacije — vnaprej in pisno. Brez skritih stroškov, brez naročnine, strojno opremo imate v lasti. Začnete lahko manjše in sistem kadar koli razširite, saj ponujamo tudi nadgradnje obstoječih sistemov. Delamo za stanovanja, hiše in pisarne.",
+    note: "Cene so okvirne in odvisne od velikosti doma ter števila naprav. Točno ponudbo pripravimo po brezplačnem posvetu in ogledu lokacije, vnaprej in pisno. Brez skritih stroškov, brez naročnine, strojno opremo imate v lasti. Začnete lahko manjše in sistem kadar koli razširite, saj ponujamo tudi nadgradnje obstoječih sistemov. Delamo za stanovanja, hiše in pisarne.",
   },
 
   faq: {
-    eyebrow: "Pogosta vprašanja",
     title: "Imate vprašanja?",
     items: [
       {
         q: "Ali morate razbijati stene ali posegati v napeljavo?",
-        a: "Sten ne razbijamo in invazivnih gradbenih del ni. Je pa potreben minimalen električni poseg: usposobljen elektro-monter vgradi krmilne module (releje) v vašo obstoječo napeljavo — za stikala in v elektro omarico. Čisto, hitro, z garancijo in računom.",
+        a: "Sten ne razbijamo in invazivnih gradbenih del ni. Je pa potreben minimalen električni poseg: usposobljen elektro-monter vgradi krmilne module (releje) v vašo obstoječo napeljavo, za stikala in v elektro omarico. Čisto, hitro, z garancijo in računom.",
       },
       {
         q: "Kdo opravi električna dela in ali je varno?",
@@ -243,7 +233,7 @@ export const homeContent = {
       },
       {
         q: "Ali sistem deluje brez interneta?",
-        a: "Da. Sistem teče lokalno na osnovi Home Assistant — osnovne funkcije (luči, scene, ključavnice) delujejo tudi ob izpadu interneta.",
+        a: "Da. Sistem teče lokalno na osnovi Home Assistant. Osnovne funkcije (luči, scene, ključavnice) delujejo tudi ob izpadu interneta.",
       },
       {
         q: "Kaj se zgodi z mojimi podatki?",
@@ -267,7 +257,27 @@ export const homeContent = {
       },
       {
         q: "Ali avtomatizirate tudi pisarne ali poslovne prostore?",
-        a: "Da. Isti odprt sistem (Home Assistant) postavimo v pisarne, sejne sobe in manjše poslovne prostore — upravljanje razsvetljave po urniku, HVAC glede na zasedenost, dostopna kontrola in nadzor porabe. Brezplačen posvet je prvi korak.",
+        a: "Da. Isti odprt sistem (Home Assistant) postavimo v pisarne, sejne sobe in manjše poslovne prostore: upravljanje razsvetljave po urniku, HVAC glede na zasedenost, dostopna kontrola in nadzor porabe. Brezplačen posvet je prvi korak.",
+      },
+    ],
+  },
+
+  // Mnenja strank. Poštenostno pravilo: nikoli ne prikažemo izmišljenega
+  // mnenja. Vnosi z `placeholder: true` so označbe mesta — komponenta jih
+  // odfiltrira in namesto njih pokaže odkrito opombo (`emptyNote`), dokler
+  // ne dodamo resničnih, potrjenih mnenj strank.
+  testimonials: {
+    title: "Kaj pravijo naše stranke",
+    subtitle:
+      "Zbiramo mnenja prvih strank. Ko bodo potrjena, jih objavimo tukaj, brez olepševanja.",
+    emptyNote:
+      "Smo mlada ekipa in mnenja strank šele zbiramo. Raje kot izmišljene citate boste tukaj videli le resnične izkušnje, takoj ko jih stranke potrdijo. Do takrat vam z veseljem posredujemo reference na posvetu.",
+    items: [
+      {
+        placeholder: true,
+        quote: "",
+        author: "",
+        location: "",
       },
     ],
   },

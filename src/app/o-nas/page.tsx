@@ -107,12 +107,11 @@ export default function ONasPage() {
       {/* Company intro */}
       <section className="section border-t border-white/5 bg-ink-900">
         <div className="container-x">
-          <span className="eyebrow">Kdo smo</span>
-          <h2 className="mt-4 max-w-2xl text-3xl font-bold sm:text-4xl">
+          <h2 className="max-w-2xl text-3xl font-bold sm:text-4xl">
             Ekipa, ki ji lahko zaupate
           </h2>
 
-          <div className="mt-10 grid gap-8 text-mist-200 md:grid-cols-2 md:gap-12">
+          <div className="mt-10 grid gap-8 text-lg text-mist-200 md:grid-cols-2 md:gap-12">
             <div className="space-y-5 leading-relaxed">
               <p>
                 <strong className="font-semibold text-white">
@@ -148,15 +147,14 @@ export default function ONasPage() {
         </div>
       </section>
 
-      {/* Team */}
+      {/* Team — real faces build trust. Larger portraits, human and credible. */}
       <section className="section border-t border-white/5">
         <div className="container-x">
-          <div className="mx-auto max-w-2xl text-center">
-            <span className="eyebrow">Ekipa</span>
-            <h2 className="mt-4 text-3xl font-bold sm:text-4xl">
+          <div className="max-w-2xl">
+            <h2 className="text-3xl font-bold sm:text-4xl">
               Spoznaj našo ekipo
             </h2>
-            <p className="mt-4 text-mist-300 leading-relaxed">
+            <p className="mt-4 text-lg leading-relaxed text-mist-300">
               Združujemo znanja s področja sistemske integracije, vgrajenih
               sistemov in avtomatizacije. Vsak projekt obravnavamo celostno —
               od načrtovanja do vzpostavitve živega sistema in podpore
@@ -164,46 +162,55 @@ export default function ONasPage() {
             </p>
           </div>
 
-          <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4">
+          <div className="mt-14 grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
             {team.map((member) => (
-              <div key={member.name} className="card flex flex-col items-center text-center">
-                <div className="relative mb-4 h-20 w-20 overflow-hidden rounded-full ring-2 ring-brand-400/30">
+              <div
+                key={member.name}
+                className="group flex flex-col overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] shadow-card transition-colors hover:border-brand-400/30"
+              >
+                <div className="relative aspect-[4/5] w-full overflow-hidden bg-ink-800">
                   <Image
                     src={`${BASE_PATH}${member.image}`}
                     alt={member.name}
                     fill
-                    className="object-cover"
-                    sizes="80px"
+                    className="object-cover transition-transform duration-300 group-hover:scale-[1.03]"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 25vw"
+                  />
+                  <div
+                    className="pointer-events-none absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-ink-900 to-transparent"
+                    aria-hidden
                   />
                 </div>
 
-                <h3 className="text-base font-semibold">{member.name}</h3>
-                <p className="mt-1 text-xs text-brand-300 font-medium tracking-wide">
-                  {member.role}
-                </p>
-                <p className="mt-3 text-sm leading-relaxed text-mist-300 flex-1">
-                  {member.bio}
-                </p>
+                <div className="flex flex-1 flex-col p-6">
+                  <h3 className="text-base font-semibold">{member.name}</h3>
+                  <p className="mt-1 text-xs font-medium tracking-wide text-brand-300">
+                    {member.role}
+                  </p>
+                  <p className="mt-3 flex-1 text-sm leading-relaxed text-mist-300">
+                    {member.bio}
+                  </p>
 
-                <div className="mt-5 flex items-center gap-3 text-mist-400">
-                  <a
-                    href={member.linkedin}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={`${member.name} na LinkedIn`}
-                    className="transition-colors hover:text-brand-300"
-                  >
-                    <LinkedInIcon />
-                  </a>
-                  <a
-                    href={member.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={`${member.name} na GitHub`}
-                    className="transition-colors hover:text-brand-300"
-                  >
-                    <GitHubIcon />
-                  </a>
+                  <div className="mt-5 flex items-center gap-4 text-mist-300">
+                    <a
+                      href={member.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`${member.name} na LinkedIn`}
+                      className="transition-colors hover:text-brand-300"
+                    >
+                      <LinkedInIcon />
+                    </a>
+                    <a
+                      href={member.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`${member.name} na GitHub`}
+                      className="transition-colors hover:text-brand-300"
+                    >
+                      <GitHubIcon />
+                    </a>
+                  </div>
                 </div>
               </div>
             ))}

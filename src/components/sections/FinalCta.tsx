@@ -9,13 +9,17 @@ export function FinalCta(props: Partial<FinalCtaProps> = {}) {
   return (
     <section className="section">
       <div className="container-x">
-        <div className="relative overflow-hidden rounded-5xl border border-white/10 bg-gradient-to-br from-brand-500/15 via-accent-600/10 to-transparent p-10 text-center sm:p-16">
-          <div className="absolute inset-0 -z-10 bg-grid-faint opacity-30" style={{ backgroundSize: "40px 40px" }} aria-hidden />
-          <h2 className="mx-auto max-w-2xl text-3xl font-bold sm:text-4xl">
+        <div className="relative overflow-hidden rounded-5xl border border-white/10 bg-ink-900/60 p-10 text-center shadow-glow sm:p-16">
+          {/* single deliberate cyan wash from the top — no violet, no HUD grid */}
+          <div
+            className="pointer-events-none absolute inset-x-0 -top-1/2 h-full bg-[radial-gradient(50%_60%_at_50%_100%,rgba(61,214,245,0.16),transparent_70%)]"
+            aria-hidden
+          />
+          <h2 className="relative mx-auto max-w-2xl text-3xl font-bold sm:text-4xl">
             {c.title}
           </h2>
-          <p className="mx-auto mt-4 max-w-xl text-mist-300">{c.subtitle}</p>
-          <Link href={c.cta.href} className="btn-primary mt-8">
+          <p className="relative mx-auto mt-4 max-w-xl text-mist-300">{c.subtitle}</p>
+          <Link href={c.cta.href} className="btn-primary relative mt-8">
             {c.cta.label} <ArrowRight className="h-4 w-4" />
           </Link>
         </div>

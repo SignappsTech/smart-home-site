@@ -15,20 +15,18 @@ export const technologyContent = {
 
   // The open, local hub — the heart of the pitch for the technical buyer.
   hub: {
-    eyebrow: "Nadzorni center",
     title: "Home Assistant — odprt in lokalen",
     text: "Srce sistema je Home Assistant, odprtokodna platforma, ki teče lokalno v vašem domu ali pisarni. Naprave različnih proizvajalcev poveže pod eno streho, brez obvezne oblačne storitve in brez naročnine.",
   },
 
   // Engineer trust levers (from the persona panel): open · local · you own it.
   pillars: {
-    eyebrow: "Zakaj odprt sistem",
     title: "Sistem ostane vaš",
     items: [
       {
         icon: "unlock",
         title: "Odprt — brez vezanosti",
-        text: "Gradimo na Home Assistant in standardnih napravah (Shelly, Aqara, Hue …). Niste ujeti v zaprt sistem enega proizvajalca — naprave lahko zamenjate ali nadgradite.",
+        text: "Gradimo na Home Assistant in standardnih napravah (Shelly, Aqara, Hue …). Niste ujeti v zaprt sistem enega proizvajalca: naprave lahko zamenjate ali nadgradite.",
       },
       {
         icon: "wifi-off",
@@ -44,34 +42,30 @@ export const technologyContent = {
   },
 
   brands: {
-    eyebrow: "Naprave",
     title: "Znamke, ki jih povezujemo",
-    text: "Združljive, preverjene naprave vodilnih proizvajalcev — izberemo prave glede na tip prostora (stanovanje, hiša, pisarna) in proračun.",
+    text: "Združljive, preverjene naprave vodilnih proizvajalcev, izberemo prave glede na tip prostora (stanovanje, hiša, pisarna) in proračun.",
   },
 
   connectivity: {
-    eyebrow: "Povezljivost",
     title: "Kako naprave komunicirajo",
-    text: "Naprave povezujemo brezžično prek Wi-Fi, Zigbee in Bluetooth LE. Podpora za Matter in Thread, ki obljubljata še boljšo združljivost med proizvajalci, je v pripravi",
+    text: "Naprave povezujemo brezžično prek Wi-Fi, Zigbee in Bluetooth LE. Podpora za Matter in Thread, ki obljubljata še boljšo združljivost med proizvajalci, je v pripravi.",
   },
 
   // Our custom dashboard — same honest framing as /funkcionalnosti, but with
   // the technical detail surfaced here.
   dashboard: {
-    eyebrow: "Naša nadzorna plošča",
     title: "Oblikovan vmesnik nad odprtim sistemom",
-    text: "Nad Home Assistant postavimo svojo, oblikovano nadzorno ploščo s tipiziranimi karticami (luči, senzorji, ogrevanje, kamere). Razporeditev urejate sami (povleci in spusti), nove naprave pa za vas dodamo in pravilno nastavimo — da ostane vmesnik pregleden in dosleden.",
+    text: "Nad Home Assistant postavimo svojo, oblikovano nadzorno ploščo s tipiziranimi karticami (luči, senzorji, ogrevanje, kamere). Razporeditev urejate sami (povleci in spusti), nove naprave pa za vas dodamo in pravilno nastavimo, da ostane vmesnik pregleden in dosleden.",
   },
 
   // What a real install looks like — scope and expectations, not sales meta.
   honest: {
-    eyebrow: "V praksi",
     title: "Kaj storimo v vašem domu",
     points: [
-      "Releje (npr. Shelly) vgradimo v obstoječo napeljavo — za stikala in v elektro omarico. Edini električni poseg, brez razbijanja sten.",
+      "Releje (npr. Shelly) vgradimo v obstoječo napeljavo, za stikala in v elektro omarico. Edini električni poseg, brez razbijanja sten.",
       "Električni del opravi usposobljen monter po veljavnih standardih, z računom in garancijo.",
-      "Naprave izberemo glede na vaš prostor (dom ali pisarno) in proračun — pred nakupom svetujemo, kaj je združljivo in se splača.",
-      "Po vgradnji vam pokažemo uporabo in ostajamo na voljo za podporo — za vsakodnevno delovanje pa niste odvisni od nas.",
+      "Naprave izberemo glede na vaš prostor (dom ali pisarno) in proračun. Pred nakupom svetujemo, kaj je združljivo in se splača.",
+      "Po vgradnji vam pokažemo uporabo in ostajamo na voljo za podporo, za vsakodnevno delovanje pa niste odvisni od nas.",
     ],
   },
 } as const;

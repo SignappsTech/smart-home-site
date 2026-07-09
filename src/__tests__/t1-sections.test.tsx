@@ -36,7 +36,7 @@ describe("T-1: sections render from props", () => {
   it("Hero: default + override", () => {
     const { rerender } = render(<Hero />);
     expect(
-      screen.getByText(/Pameten dom v vašem obstoječem domu/),
+      screen.getByText(/Pametna avtomatizacija za dom in pisarno/),
     ).toBeInTheDocument();
 
     rerender(<Hero {...titleOverride<HeroProps>("POVOZI")} />);

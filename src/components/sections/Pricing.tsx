@@ -23,8 +23,8 @@ export function Pricing(props: Partial<PricingProps> = {}) {
                 key={tier.name}
                 className={
                   featured
-                    ? "relative flex h-full flex-col rounded-4xl border border-brand-400/40 bg-gradient-to-b from-brand-400/[0.1] to-transparent p-8 shadow-glow"
-                    : "relative flex h-full flex-col rounded-4xl border border-white/10 bg-white/[0.02] p-8"
+                    ? "relative flex h-full flex-col rounded-4xl border border-brand-400/40 bg-brand-400/[0.06] p-8 shadow-glow"
+                    : "relative flex h-full flex-col rounded-4xl border border-white/10 bg-white/[0.02] p-8 transition-colors hover:border-white/20"
                 }
               >
                 {featured && "badge" in tier && tier.badge && (
@@ -36,8 +36,8 @@ export function Pricing(props: Partial<PricingProps> = {}) {
                 <h3 className="text-xl font-semibold text-white">{tier.name}</h3>
                 <p className="mt-1 text-sm text-brand-300">{tier.tagline}</p>
 
-                <p className="mt-6 text-4xl font-bold text-gradient">{tier.price}</p>
-                <p className="mt-1 text-xs text-mist-400">{tier.priceNote}</p>
+                <p className="mt-6 text-4xl font-bold text-white">{tier.price}</p>
+                <p className="mt-1 text-xs text-mist-300">{tier.priceNote}</p>
 
                 <p className="mt-5 text-sm text-mist-300">{tier.bestFor}</p>
 
@@ -53,7 +53,7 @@ export function Pricing(props: Partial<PricingProps> = {}) {
                   ))}
                 </ul>
 
-                <p className="mt-6 border-t border-white/10 pt-4 text-xs italic leading-relaxed text-mist-400 lg:mt-auto">
+                <p className="mt-6 border-t border-white/10 pt-4 text-xs italic leading-relaxed text-mist-300 lg:mt-auto">
                   {tier.example}
                 </p>
 
@@ -68,7 +68,7 @@ export function Pricing(props: Partial<PricingProps> = {}) {
           })}
         </div>
 
-        <p className="mx-auto mt-10 max-w-3xl text-center text-sm leading-relaxed text-mist-400">
+        <p className="mx-auto mt-10 max-w-3xl text-center text-sm leading-relaxed text-mist-300">
           {p.note}
         </p>
       </div>
