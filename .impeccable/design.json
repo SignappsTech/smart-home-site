@@ -1,0 +1,140 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-07-09T00:00:00.000Z",
+  "title": "Design System: Signapps Smart-Home",
+  "extensions": {
+    "colorMeta": {
+      "brand-400": {
+        "role": "primary",
+        "displayName": "Electric Cyan",
+        "canonical": "#16bfe0",
+        "tonalRamp": ["#0a2a33", "#0d6880", "#0883a1", "#06a3c4", "#16bfe0", "#3dd6f5", "#86e9ff", "#e6fbff"]
+      },
+      "accent-500": {
+        "role": "secondary",
+        "displayName": "Signal Violet",
+        "canonical": "#8b5cf6",
+        "tonalRamp": ["#1e1435", "#3b2a6b", "#5b3fb0", "#7c3aed", "#8b5cf6", "#a78bfa", "#c4b5fd", "#ede9fe"]
+      },
+      "ink-950": {
+        "role": "neutral",
+        "displayName": "Deep Ink",
+        "canonical": "#070a12",
+        "tonalRamp": ["#070a12", "#0b1020", "#121829", "#1b2238", "#28304a", "#3c4869", "#6b7a96", "#9fadc6"]
+      },
+      "mist-200": {
+        "role": "neutral",
+        "displayName": "Mist",
+        "canonical": "#cdd6e6",
+        "tonalRamp": ["#3c4869", "#4c5a80", "#6b7a96", "#9fadc6", "#cdd6e6", "#eef2f8", "#f6f8fc", "#ffffff"]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero and page H1 only. 700, tight tracking, balanced wrap, white." },
+      "headline": { "displayName": "Headline", "purpose": "Section H2s." },
+      "title": { "displayName": "Title", "purpose": "Card and sub-section headings." },
+      "body": { "displayName": "Body", "purpose": "Default prose in mist-200; subtitles in mist-300. Cap at 65–75ch." },
+      "label": { "displayName": "Label", "purpose": "Eyebrow pill and small overlines only. Uppercase, 0.18em tracking." }
+    },
+    "shadows": [
+      { "name": "glow", "value": "0 0 0 1px rgba(61,214,245,0.18), 0 20px 60px -20px rgba(6,163,196,0.45)", "purpose": "Cyan status-light halo under the primary CTA / hero focal element. One per view." },
+      { "name": "card", "value": "0 1px 0 0 rgba(255,255,255,0.04) inset, 0 20px 50px -25px rgba(0,0,0,0.8)", "purpose": "Soft ambient floor under container cards. Never a hard drop shadow." }
+    ],
+    "motion": [
+      { "name": "floaty", "value": "translateY(-10px) over 6s ease-in-out infinite", "purpose": "Gentle idle float on decorative/hero graphics." },
+      { "name": "fade-up", "value": "opacity 0→1, translateY(16px→0) over 0.6s ease-out", "purpose": "Entrance for above-the-fold content. Enhances an already-visible default." },
+      { "name": "ease-out-standard", "value": "ease-out", "purpose": "Default easing for state transitions. No bounce, no elastic." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "lg", "value": "1024px" },
+      { "name": "container-max", "value": "80rem" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The one lit action. Cyan gradient (solid brand-400 is the on-brand target), dark text, cyan glow, hover lift.",
+      "html": "<button class=\"ds-btn-primary\">Brezplačni posvet<svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"/><polyline points=\"12 5 19 12 12 19\"/></svg></button>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; background: linear-gradient(to right, #16bfe0, #8b5cf6); color: #070a12; padding: 0.75rem 1.5rem; border: none; border-radius: 9999px; font-size: 0.875rem; font-weight: 600; box-shadow: 0 0 0 1px rgba(61,214,245,0.18), 0 20px 60px -20px rgba(6,163,196,0.45); cursor: pointer; transition: transform 0.2s ease-out; } .ds-btn-primary:hover { transform: translateY(-2px); } .ds-btn-primary:focus-visible { outline: none; box-shadow: 0 0 0 2px #3dd6f5; }"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "The quiet secondary action. Translucent fill, hairline border, white text.",
+      "html": "<button class=\"ds-btn-ghost\">Poglej cenik</button>",
+      "css": ".ds-btn-ghost { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; background: rgba(255,255,255,0.05); color: #ffffff; padding: 0.75rem 1.5rem; border: 1px solid rgba(255,255,255,0.15); border-radius: 9999px; font-size: 0.875rem; font-weight: 600; cursor: pointer; transition: background-color 0.2s ease-out; } .ds-btn-ghost:hover { background: rgba(255,255,255,0.1); } .ds-btn-ghost:focus-visible { outline: none; box-shadow: 0 0 0 2px rgba(255,255,255,0.3); }"
+    },
+    {
+      "name": "Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "Faint translucent lift over the ink surface. Soft 24px corners, hairline border, ambient floor shadow. Never frosted glass, never nested.",
+      "html": "<div class=\"ds-card\"><h3 class=\"ds-card-title\">Ena aplikacija za vse</h3><p class=\"ds-card-body\">Shelly, Sonoff, Aqara in Philips Hue — vse v Home Assistant, brez vezanosti na proizvajalca.</p></div>",
+      "css": ".ds-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 1.5rem; padding: 1.5rem; box-shadow: 0 1px 0 0 rgba(255,255,255,0.04) inset, 0 20px 50px -25px rgba(0,0,0,0.8); } .ds-card-title { color: #ffffff; font-size: 1.25rem; font-weight: 600; letter-spacing: -0.01em; margin: 0 0 0.5rem; } .ds-card-body { color: #cdd6e6; font-size: 1rem; line-height: 1.65; margin: 0; }"
+    },
+    {
+      "name": "Text Input",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Translucent field with a soft cyan focus — border shift plus ring, no hard outline.",
+      "html": "<input class=\"ds-input\" type=\"text\" placeholder=\"Janez Novak\" />",
+      "css": ".ds-input { width: 100%; background: rgba(255,255,255,0.03); color: #ffffff; border: 1px solid rgba(255,255,255,0.1); border-radius: 1rem; padding: 0.75rem 1rem; font-size: 0.875rem; transition: border-color 0.2s ease-out, box-shadow 0.2s ease-out; } .ds-input::placeholder { color: #6b7a96; } .ds-input:focus { outline: none; border-color: rgba(22,191,224,0.5); box-shadow: 0 0 0 2px rgba(22,191,224,0.2); }"
+    },
+    {
+      "name": "Nav Link",
+      "kind": "nav",
+      "refersTo": "nav",
+      "description": "14px medium link. Quiet mist default, white on hover, cyan when active.",
+      "html": "<nav class=\"ds-nav\"><a class=\"ds-nav-link ds-nav-link--active\" aria-current=\"page\">Funkcionalnosti</a><a class=\"ds-nav-link\">Cenik</a><a class=\"ds-nav-link\">O nas</a></nav>",
+      "css": ".ds-nav { display: flex; gap: 2rem; align-items: center; } .ds-nav-link { color: #9fadc6; font-size: 0.875rem; font-weight: 500; text-decoration: none; cursor: pointer; transition: color 0.2s ease-out; } .ds-nav-link:hover { color: #ffffff; } .ds-nav-link--active { color: #86e9ff; }"
+    },
+    {
+      "name": "Eyebrow Pill",
+      "kind": "chip",
+      "refersTo": "eyebrow",
+      "description": "Signature overline pill — use sparingly, never above every section.",
+      "html": "<span class=\"ds-eyebrow\">Pametni dom</span>",
+      "css": ".ds-eyebrow { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 9999px; padding: 0.25rem 0.75rem; font-size: 0.75rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.18em; color: #86e9ff; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Calm Control Room",
+    "overview": "This is the interface of a well-run system you trust to run your home quietly. Dark, layered, precise — everything in its place. The premium, high-tech surface exists to signal competence, never to perform coolness. A skeptical Slovenian homeowner should read the screen as 'these people know exactly what they're doing,' then feel calm, not dazzled. High-tech in service of trust. Density is generous and unhurried: wide gutters, deliberate vertical rhythm, one idea per section. The layered ink surfaces give quiet depth; the electric cyan brand is the single point of energy, used like a status light — sparingly, so it means something. This system explicitly rejects the 'giga-modern' AI-slop lane it grew out of (gradient text, an eyebrow above every section, glassmorphism as the default card) and cold sci-fi neon-on-black futurism alike. The answer to both is restraint: fewer effects, executed precisely.",
+    "keyCharacteristics": [
+      "Dark, layered ink surfaces (five-step ink ramp) for quiet depth.",
+      "Electric cyan as a rare status-light accent; violet only as occasional glow.",
+      "Single humanist-adjacent sans (Inter) across the whole scale; hierarchy by weight and size, not by pairing.",
+      "Fully rounded pills for actions; soft 24px cards for containers.",
+      "Motion is gentle and functional (float, fade-up), never bouncy or elastic."
+    ],
+    "rules": [
+      { "name": "The Status-Light Rule", "body": "Electric cyan appears on ≤10% of any screen and marks exactly one thing at a time — the primary action, the active state, the live signal. Its rarity is what makes it read as 'on.'", "section": "colors" },
+      { "name": "The Cyan-Leads Rule", "body": "Cyan is the only accent voice. Violet is permitted only as a low-opacity gradient/glow companion behind cyan, never as an equal second color and never on an interactive element.", "section": "colors" },
+      { "name": "The One-Voice Rule", "body": "Never introduce a second font family. Contrast comes from weight (400 body vs. 700 display) and size.", "section": "typography" },
+      { "name": "The Legibility-Floor Rule", "body": "Body text is never lighter than mist-300 (#9fadc6) on ink surfaces. mist-400 is for incidental supporting text only. Verify ≥4.5:1.", "section": "typography" },
+      { "name": "The Ambient-Depth Rule", "body": "Depth reads through the ink ramp + a 1px inset highlight first; the deep shadow is a whisper beneath it. If a card looks like it has a hard drop shadow, the shadow is wrong.", "section": "elevation" },
+      { "name": "The One-Glow Rule", "body": "The cyan glow shadow marks one element per view. Two glowing things collapse the status-light meaning.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do treat electric cyan as a status light — one lit thing per view, ≤10% of the surface.",
+      "Do build depth from the ink ramp + translucency + the ambient card shadow; keep shadows a whisper.",
+      "Do carry hierarchy with Inter weight and size alone.",
+      "Do keep dark text on cyan buttons and verify body text ≥4.5:1; mist-400 is incidental only.",
+      "Do give every animation a prefers-reduced-motion: reduce alternative; keep motion gentle, easing out, never bouncing.",
+      "Do keep contact sparing and calm — earn the click by building confidence."
+    ],
+    "donts": [
+      "Don't use gradient text (background-clip: text on a gradient); use a single solid color, emphasis via weight/size.",
+      "Don't put an uppercase tracked eyebrow above every section; vary the cadence.",
+      "Don't default to glassmorphism; cards are faint translucent lifts, blur is for the sticky header and mobile menu only.",
+      "Don't let violet become a second CTA or accent color.",
+      "Don't tip cyan into cold sci-fi neon or add HUD/spaceship motifs.",
+      "Don't introduce a second font family, fear-selling/urgency copy, or the SaaS hero-metric template.",
+      "Don't nest cards inside cards, or use a border-left/border-right >1px colored stripe as a decorative accent."
+    ]
+  }
+}

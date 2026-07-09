@@ -13,8 +13,7 @@ export function Comparison(props: Partial<ComparisonProps> = {}) {
     <section id="primerjava" className="section bg-ink-900/40">
       <div className="container-x">
         <div className="mx-auto max-w-2xl text-center">
-          <span className="eyebrow">{c.eyebrow}</span>
-          <h2 className="mt-4 text-3xl font-bold sm:text-4xl">{c.title}</h2>
+          <h2 className="text-3xl font-bold sm:text-4xl">{c.title}</h2>
         </div>
 
         <div className="mt-14 grid gap-6 lg:grid-cols-2">
@@ -39,7 +38,7 @@ export function Comparison(props: Partial<ComparisonProps> = {}) {
             <h3 className="text-xl font-semibold text-mist-200">{c.wired.label}</h3>
             <ul className="mt-6 space-y-3">
               {c.wired.points.map((p) => (
-                <li key={p} className="flex items-start gap-3 text-sm text-mist-400">
+                <li key={p} className="flex items-start gap-3 text-sm text-mist-300">
                   <Cross className="mt-0.5 h-5 w-5 shrink-0 text-mist-400/70" />
                   {p}
                 </li>

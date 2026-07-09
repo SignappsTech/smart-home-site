@@ -19,18 +19,18 @@ export default function FunkcionalnostiPage() {
         subtitle={f.intro}
       />
 
-      {/* Custom dashboard highlight — our designed UI vs. a raw HA panel */}
+      {/* Custom dashboard highlight — our designed UI vs. a raw HA panel.
+          The one cyan focal moment on this page. */}
       <section className="section pt-0">
         <div className="container-x">
           <div className="overflow-hidden rounded-4xl border border-brand-400/20 bg-gradient-to-b from-brand-400/[0.07] to-transparent p-8 shadow-glow sm:p-10">
-            <span className="eyebrow">{f.dashboard.eyebrow}</span>
-            <h2 className="mt-4 text-2xl font-bold sm:text-3xl">{f.dashboard.title}</h2>
-            <p className="mt-4  leading-relaxed text-mist-300">{f.dashboard.text}</p>
-            <ul className="mt-7 grid gap-3 sm:grid-cols-2">
+            <h2 className="text-2xl font-bold sm:text-3xl">{f.dashboard.title}</h2>
+            <p className="mt-4 max-w-2xl text-lg leading-relaxed text-mist-300">{f.dashboard.text}</p>
+            <ul className="mt-8 grid gap-3 sm:grid-cols-2">
               {f.dashboard.points.map((p) => (
-                <li key={p} className="flex items-start gap-3 text-sm text-mist-200">
+                <li key={p} className="flex items-start gap-3 text-mist-200">
                   <Check className="mt-0.5 h-5 w-5 shrink-0 text-brand-300" />
-                  {p}
+                  <span className="leading-relaxed">{p}</span>
                 </li>
               ))}
             </ul>
@@ -38,25 +38,41 @@ export default function FunkcionalnostiPage() {
         </div>
       </section>
 
+      {/* Feature groups — scannable scenarios, not a flat icon grid. */}
       <section className="section pt-0">
-        <div className="container-x grid gap-6 lg:grid-cols-2">
-          {f.groups.map((g) => (
-            <div key={g.title} className="card hover:border-brand-400/30">
-              <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-400/10 text-brand-300 ring-1 ring-brand-400/20">
-                <FeatureIcon name={g.icon} />
+        <div className="container-x">
+          <div className="max-w-2xl">
+            <h2 className="text-3xl font-bold sm:text-4xl">Kaj vse postavimo za vas</h2>
+            <p className="mt-4 text-lg text-mist-300">
+              Štiri področja, ki jih najpogosteje avtomatiziramo — vsako
+              sestavimo iz preverjenih naprav in prilagodimo vašemu prostoru.
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-6 lg:grid-cols-2">
+            {f.groups.map((g) => (
+              <div
+                key={g.title}
+                className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] p-7 shadow-card transition-colors hover:border-brand-400/30 sm:p-8"
+              >
+                <div className="flex items-center gap-4">
+                  <div className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-brand-400/10 text-brand-300 ring-1 ring-brand-400/20 transition-transform duration-200 group-hover:scale-105">
+                    <FeatureIcon name={g.icon} />
+                  </div>
+                  <h3 className="text-xl font-semibold">{g.title}</h3>
+                </div>
+                <p className="mt-4 text-mist-300">{g.text}</p>
+                <ul className="mt-6 grid gap-2.5 border-t border-white/5 pt-6">
+                  {g.points.map((p) => (
+                    <li key={p} className="flex items-center gap-2.5 text-sm text-mist-200">
+                      <Check className="h-4 w-4 shrink-0 text-brand-300" />
+                      {p}
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <h2 className="mt-5 text-xl font-semibold">{g.title}</h2>
-              <p className="mt-2 text-sm leading-relaxed text-mist-300">{g.text}</p>
-              <ul className="mt-5 space-y-2">
-                {g.points.map((p) => (
-                  <li key={p} className="flex items-center gap-2.5 text-sm text-mist-200">
-                    <Check className="h-4 w-4 shrink-0 text-brand-300" />
-                    {p}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </section>
 

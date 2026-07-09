@@ -12,6 +12,23 @@
     scroll-behavior: smooth;
   }
 
+  /* Reduced motion is not optional: disable smooth-scroll and collapse every
+     animation/transition to near-instant for users who ask. */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
   body {
     @apply bg-ink-950 text-mist-200 antialiased;
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
@@ -45,13 +62,16 @@
            text-brand-200;
   }
 
-  /* Primary gradient button */
+  /* Primary button — solid cyan, the one lit action (Cyan-Leads Rule).
+     No violet on interactive elements. */
   .btn-primary {
     @apply inline-flex items-center justify-center gap-2 rounded-full
-           bg-gradient-to-r from-brand-400 to-accent-500 px-6 py-3
+           bg-brand-400 px-6 py-3
            text-sm font-semibold text-ink-950 shadow-glow
-           transition-transform duration-200 hover:-translate-y-0.5
-           focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-300;
+           transition-[transform,background-color] duration-200
+           hover:-translate-y-0.5 hover:bg-brand-300
+           focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-300
+           focus-visible:ring-offset-2 focus-visible:ring-offset-ink-950;
   }
 
   /* Secondary / ghost button */
@@ -62,16 +82,10 @@
            focus:outline-none focus-visible:ring-2 focus-visible:ring-white/30;
   }
 
-  /* Glassy card surface */
+  /* Card surface — a faint translucent lift, not frosted glass. Blur is
+     reserved for the sticky header and mobile menu only (see DESIGN.md). */
   .card {
-    @apply rounded-3xl border border-white/10 bg-white/[0.03] p-6 shadow-card
-           backdrop-blur-sm;
-  }
-
-  /* Subtle gradient text */
-  .text-gradient {
-    @apply bg-gradient-to-r from-brand-200 via-brand-300 to-accent-400
-           bg-clip-text text-transparent;
+    @apply rounded-3xl border border-white/10 bg-white/[0.03] p-6 shadow-card;
   }
 }
 

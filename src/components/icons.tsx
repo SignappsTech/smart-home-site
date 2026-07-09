@@ -115,6 +115,12 @@ export const Cross = (p: IconProps) => (
   </svg>
 );
 
+export const Quote = (p: IconProps) => (
+  <svg {...base(p)}>
+    <path d="M8 6C5.5 7.5 4 10.2 4 13.5V18h6v-6H7c0-2 .7-3.5 2.5-4.6L8 6zM19 6c-2.5 1.5-4 4.2-4 7.5V18h6v-6h-3c0-2 .7-3.5 2.5-4.6L19 6z" />
+  </svg>
+);
+
 export const ArrowRight = (p: IconProps) => (
   <svg {...base(p)}>
     <path d="M5 12h14M13 6l6 6-6 6" />

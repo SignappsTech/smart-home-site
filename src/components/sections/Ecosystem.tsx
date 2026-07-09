@@ -25,8 +25,7 @@ export function Ecosystem(props: Partial<EcosystemProps> = {}) {
         </div>
 
         <div className="order-1 lg:order-2">
-          <span className="eyebrow">{e.eyebrow}</span>
-          <h2 className="mt-4 text-3xl font-bold sm:text-4xl">{e.title}</h2>
+          <h2 className="text-3xl font-bold sm:text-4xl">{e.title}</h2>
           <p className="mt-4 max-w-lg text-mist-300">{e.subtitle}</p>
 
           {!e.teaser && (
@@ -52,12 +51,12 @@ export function Ecosystem(props: Partial<EcosystemProps> = {}) {
                     className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-medium ${
                       c.available
                         ? "border border-brand-400/30 bg-brand-400/10 text-brand-200"
-                        : "border border-accent-400/30 bg-accent-500/10 text-accent-400"
+                        : "border border-white/10 bg-white/[0.04] text-mist-300"
                     }`}
                   >
                     {c.name}
                     {!c.available && "label" in c && (
-                      <span className="rounded-full bg-accent-500/20 px-1.5 py-0.5 text-[10px] uppercase tracking-wide">
+                      <span className="rounded-full bg-white/10 px-1.5 py-0.5 text-[10px] uppercase tracking-wide text-mist-400">
                         {c.label}
                       </span>
                     )}

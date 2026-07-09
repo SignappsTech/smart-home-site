@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { homeContent } from "@/content/home";
 import { PhoneMockup } from "@/components/graphics/PhoneMockup";
-import { ArrowRight } from "@/components/icons";
+import { ArrowRight, Check } from "@/components/icons";
 
 export type HeroProps = typeof homeContent.hero;
 
@@ -17,7 +17,14 @@ export function Hero(props: Partial<HeroProps> = {}) {
       />
       <div className="container-x relative grid items-center gap-12 pb-16 pt-14 sm:pb-24 sm:pt-20 lg:grid-cols-[1.1fr_0.9fr]">
         <div className="animate-fade-up">
-          <span className="eyebrow">{h.eyebrow}</span>
+          {/* Subtle status-light overline (not a pill — the one deliberate eyebrow lives on the pricing teaser). */}
+          <p className="flex items-center gap-2.5 text-sm font-medium text-mist-300">
+            <span className="relative flex h-2 w-2" aria-hidden>
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand-400/70" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-brand-300 shadow-[0_0_8px_1px_rgba(61,214,245,0.7)]" />
+            </span>
+            {h.eyebrow}
+          </p>
           <h1 className="mt-5 text-4xl font-bold leading-[1.05] sm:text-5xl lg:text-6xl">
             {h.title}
           </h1>
@@ -34,26 +41,27 @@ export function Hero(props: Partial<HeroProps> = {}) {
             </Link>
           </div>
 
-          <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2">
+          <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2.5">
             {h.badges.map((b) => (
-              <span key={b} className="text-sm text-mist-400">
-                ✓ {b}
+              <span key={b} className="inline-flex items-center gap-1.5 text-sm text-mist-300">
+                <Check className="h-4 w-4 shrink-0 text-brand-300" aria-hidden />
+                {b}
               </span>
             ))}
           </div>
 
-          <p className="mt-6 text-sm text-mist-400">
+          <p className="mt-6 text-sm text-mist-300">
             {h.priceLabel}{" "}
-            <span className="text-2xl font-bold text-gradient align-middle">
+            <span className="align-middle text-2xl font-bold text-white">
               {h.price}
             </span>
           </p>
         </div>
 
-        {/* phone mockup */}
+        {/* phone mockup — gentle float, cyan halo focal glow */}
         <div className="relative mx-auto w-full max-w-sm">
           <div className="absolute inset-0 -z-10 bg-radial-brand blur-2xl" aria-hidden />
-          <div className="">
+          <div className="motion-safe:animate-floaty">
             <PhoneMockup className="mx-auto h-auto w-[260px] drop-shadow-2xl sm:w-[300px]" />
           </div>
         </div>

@@ -20,8 +20,8 @@ export function TrustBar(props: Partial<TrustBarProps> = {}) {
         </p>
 
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-          {/* hub — featured pill */}
-          <span className="inline-flex items-center rounded-full border border-brand-400/35 bg-gradient-to-r from-brand-400/15 to-accent-500/10 px-5 py-2.5 text-sm font-semibold text-white shadow-[0_0_24px_-4px_rgba(61,214,245,0.25)]">
+          {/* hub — featured pill (solid cyan tint, the one lit item; no violet) */}
+          <span className="inline-flex items-center rounded-full border border-brand-400/35 bg-brand-400/[0.12] px-5 py-2.5 text-sm font-semibold text-white shadow-[0_0_24px_-4px_rgba(61,214,245,0.3)]">
             {ecosystem.hub.name}
           </span>
 

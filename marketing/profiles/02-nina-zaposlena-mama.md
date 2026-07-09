@@ -26,7 +26,7 @@ po petih različnih aplikacijah.
 - **»Vedno veste, kaj se dogaja doma«** — ključavnica, video zvonec, senzorji, obvestila
 - **Vse v eni aplikaciji** — konec petih aplikacij in predala daljincev
 - **Scene** (jutro / večer / odhod) — stvari se zgodijo same
-- **Vgradnja v 1–2 dneh, brez prahu, za seboj pospravimo**
+- **Vgradnja v 1–2 dneh, za seboj pospravimo**
 - Slovensko podjetje, resnične osebe, ki se oglasijo na telefon
 
 ## Kaj jo odvrne

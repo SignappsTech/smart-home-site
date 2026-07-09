@@ -13,6 +13,9 @@ export function Header() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
+  // Immersive routes (e.g. /dozivetje) render their own minimal chrome.
+  const immersive = pathname?.startsWith("/dozivetje");
+
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
     onScroll();
@@ -27,6 +30,8 @@ export function Header() {
       document.body.style.overflow = "";
     };
   }, [open]);
+
+  if (immersive) return null;
 
   return (
     <header
