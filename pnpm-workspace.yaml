@@ -1,5 +1,5 @@
 packages:
-  - .
+  - sites/*
 
 # Native deps allowed to run install/build scripts. This environment's pnpm
 # supply-chain wrapper (local + CI) approves builds via `allowBuilds` (a map),

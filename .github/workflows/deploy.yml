@@ -2,6 +2,9 @@ name: Deploy to GitHub Pages
 
 # Builds the Next.js static export and publishes it to GitHub Pages.
 # Requires: repo Settings → Pages → "Build and deployment" → Source: "GitHub Actions".
+#
+# The repo is a pnpm workspace of standalone site variants (sites/*). Exactly
+# one variant ships to production — change PROD_SITE below to switch which.
 
 on:
   push:
@@ -18,6 +21,9 @@ permissions:
 concurrency:
   group: pages
   cancel-in-progress: false
+
+env:
+  PROD_SITE: v1 # which sites/<name> variant deploys to signapps.si
 
 jobs:
   build:
@@ -36,15 +42,15 @@ jobs:
 
       - run: pnpm install --frozen-lockfile
 
-      # Static export → ./out, served from the root of the custom domain
-      # signapps.si (no basePath). public/CNAME is copied into the artifact so
-      # GitHub Pages keeps the custom domain across deploys. The post-build
-      # script strips dev-only routes.
-      - run: pnpm build
+      # Static export → sites/<PROD_SITE>/out, served from the root of the
+      # custom domain signapps.si (no basePath). public/CNAME is copied into
+      # the artifact so GitHub Pages keeps the custom domain across deploys.
+      # The post-build script strips dev-only routes.
+      - run: pnpm --filter "site-${PROD_SITE}" build
 
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: ./out
+          path: ./sites/${{ env.PROD_SITE }}/out
 
   deploy:
     needs: build

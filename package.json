@@ -1,37 +1,14 @@
 {
-  "name": "smart-home-site",
+  "name": "smart-home-sites",
   "version": "0.1.0",
   "private": true,
-  "description": "Signapps smart-home marketing site — Next.js (static export), Slovenian.",
+  "description": "Workspace of standalone site variants under sites/*. Each variant is a complete Next.js app; the winner ships. See scripts/new-site.mjs to start a new variant.",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build && node scripts/strip-dev-routes.mjs",
-    "start": "next start",
-    "lint": "next lint",
-    "typecheck": "tsc --noEmit",
-    "test": "vitest run"
-  },
-  "dependencies": {
-    "lucide-react": "^1.22.0",
-    "next": "15.1.6",
-    "react": "19.0.0",
-    "react-dom": "19.0.0",
-    "recharts": "^3.9.0"
-  },
-  "devDependencies": {
-    "@testing-library/jest-dom": "6.6.3",
-    "@testing-library/react": "16.1.0",
-    "@types/node": "22.10.7",
-    "@types/react": "19.0.7",
-    "@types/react-dom": "19.0.3",
-    "@vitejs/plugin-react": "4.3.4",
-    "autoprefixer": "10.4.20",
-    "eslint": "9.18.0",
-    "eslint-config-next": "15.1.6",
-    "jsdom": "25.0.1",
-    "postcss": "8.5.1",
-    "tailwindcss": "3.4.17",
-    "typescript": "5.7.3",
-    "vitest": "2.1.8"
+    "dev": "pnpm --filter site-v1 dev",
+    "build": "pnpm --filter site-v1 build",
+    "new-site": "node scripts/new-site.mjs",
+    "lint": "pnpm -r lint",
+    "typecheck": "pnpm -r typecheck",
+    "test": "pnpm -r test"
   }
 }
