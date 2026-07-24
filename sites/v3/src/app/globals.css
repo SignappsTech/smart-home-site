@@ -1,0 +1,169 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-display: "Inter", system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Reduced motion is not optional: disable smooth-scroll and collapse every
+     animation/transition to near-instant for users who ask. */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  body {
+    @apply bg-ink-950 text-mist-200 antialiased;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  ::selection {
+    @apply bg-brand-400/30 text-white;
+  }
+
+  h1, h2, h3, h4 {
+    @apply text-white font-display tracking-tight;
+    text-wrap: balance;
+  }
+}
+
+@layer components {
+  /* Page container */
+  .container-x {
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-8;
+  }
+
+  /* Section vertical rhythm */
+  .section {
+    @apply py-20 sm:py-28;
+  }
+
+  /* Eyebrow label above headings */
+  .eyebrow {
+    @apply inline-flex items-center gap-2 rounded-full border border-white/10
+           bg-white/5 px-3 py-1 text-xs font-medium uppercase tracking-[0.18em]
+           text-brand-200;
+  }
+
+  /* Primary button, solid cyan, the one lit action (Cyan-Leads Rule).
+     No violet on interactive elements. */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full
+           bg-brand-400 px-6 py-3
+           text-sm font-semibold text-ink-950 shadow-glow
+           transition-[transform,background-color] duration-200
+           hover:-translate-y-0.5 hover:bg-brand-300
+           focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-300
+           focus-visible:ring-offset-2 focus-visible:ring-offset-ink-950;
+  }
+
+  /* Secondary / ghost button */
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-full
+           border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold
+           text-white transition-colors duration-200 hover:bg-white/10
+           focus:outline-none focus-visible:ring-2 focus-visible:ring-white/30;
+  }
+
+  /* Card surface, a faint translucent lift, not frosted glass. Blur is
+     reserved for the sticky header and mobile menu only (see DESIGN.md). */
+  .card {
+    @apply rounded-3xl border border-white/10 bg-white/[0.03] p-6 shadow-card;
+  }
+}
+
+/* Decorative animated grid/glow backdrop helper */
+.bg-hero {
+  background-image:
+    radial-gradient(60% 50% at 50% -10%, rgba(61, 214, 245, 0.16) 0%, transparent 70%),
+    radial-gradient(40% 40% at 85% 10%, rgba(124, 58, 237, 0.14) 0%, transparent 70%);
+}
+
+/* Doživetje: presence simulation — mostly dark, one brief on per cycle. */
+@keyframes presence-flicker {
+  0%,
+  18% {
+    opacity: 0;
+  }
+  22% {
+    opacity: 0.9;
+  }
+  38% {
+    opacity: 0.85;
+  }
+  44%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Soft vertical wash for fresh-air / ventilation scenes. */
+@keyframes air-rise {
+  0%,
+  100% {
+    transform: translateY(8%);
+    opacity: 0.25;
+  }
+  50% {
+    transform: translateY(-6%);
+    opacity: 0.55;
+  }
+}
+
+/* Natural breeze: slow horizontal haze drift. */
+@keyframes breeze-drift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(8%, -2%, 0);
+  }
+}
+
+@keyframes breeze-breathe {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: translate3d(0, 0, 0) scaleX(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: translate3d(3%, -1%, 0) scaleX(1.04);
+  }
+}
+
+@keyframes breeze-mote {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 0.15;
+  }
+  40% {
+    opacity: 0.55;
+  }
+  50% {
+    transform: translate3d(18px, -28px, 0);
+    opacity: 0.35;
+  }
+  80% {
+    opacity: 0.2;
+  }
+}
