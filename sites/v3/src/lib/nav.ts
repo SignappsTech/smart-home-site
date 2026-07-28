@@ -6,7 +6,7 @@ export const navLinks = [
   // { label: "Cenik", href: "/cenik/" },
   { label: "O nas", href: "/o-nas/" },
   { label: "Kontakt", href: "/kontakt/" },
-  { label: "Dozivetje", href: "/dozivetje/" },
+  { label: "Doživetje", href: "/dozivetje/" },
 ] as const;
 
 function normalizePath(path: string): string {

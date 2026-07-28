@@ -35,7 +35,7 @@ export function HomeMoments(props: Partial<HomeMomentsProps> = {}) {
                   sizes="(max-width: 768px) 100vw, 33vw"
                   className="transition-colors duration-200 group-hover:border-brand-400/25"
                 />
-                <p className="mt-4 text-sm leading-relaxed text-mist-200">{item.caption}</p>
+                <p className="mt-4 text-base leading-relaxed text-mist-200">{item.caption}</p>
               </Reveal>
             );
           })}

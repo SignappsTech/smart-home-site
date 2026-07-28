@@ -39,7 +39,7 @@ export function PageHeader({
           aria-hidden
         >
           <Image src={bgSrc} alt="" fill sizes="100vw" className="object-cover opacity-40" />
-          <div className="absolute inset-0 bg-gradient-to-b from-ink-950/75 via-ink-950/85 to-ink-950" />
+          <div className="absolute inset-0 bg-gradient-to-b from-ink-950/90 via-ink-950/92 to-ink-950" />
         </div>
       )}
       {/* Faint grid, quiet depth, masked to fade toward the edges. */}
@@ -75,7 +75,7 @@ export function PageHeader({
           {title}
         </h1>
         {subtitle && (
-          <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-mist-300 motion-safe:animate-fade-up">
+          <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-mist-200 motion-safe:animate-fade-up">
             {subtitle}
           </p>
         )}

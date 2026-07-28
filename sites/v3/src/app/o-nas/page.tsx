@@ -99,8 +99,8 @@ export default function ONasPage() {
               <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-400/10 text-brand-300 ring-1 ring-brand-400/20 transition-transform group-hover:scale-110">
                 <Icon />
               </div>
-              <h2 className="mt-5 text-lg font-semibold">{title}</h2>
-              <p className="mt-2 text-sm leading-relaxed text-mist-300">{text}</p>
+              <h3 className="mt-5 text-lg font-semibold">{title}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-mist-200">{text}</p>
             </div>
           ))}
         </div>
@@ -193,13 +193,13 @@ export default function ONasPage() {
                     {member.bio}
                   </p>
 
-                  <div className="mt-5 flex items-center gap-4 text-mist-300">
+                  <div className="mt-5 flex items-center gap-1 text-mist-300">
                     <a
                       href={member.linkedin}
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={`${member.name} na LinkedIn`}
-                      className="transition-colors hover:text-brand-300"
+                      className="inline-flex h-11 w-11 items-center justify-center rounded-xl transition-colors hover:text-brand-300"
                     >
                       <LinkedInIcon />
                     </a>
@@ -208,7 +208,7 @@ export default function ONasPage() {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={`${member.name} na GitHub`}
-                      className="transition-colors hover:text-brand-300"
+                      className="inline-flex h-11 w-11 items-center justify-center rounded-xl transition-colors hover:text-brand-300"
                     >
                       <GitHubIcon />
                     </a>

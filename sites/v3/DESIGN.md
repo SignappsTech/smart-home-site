@@ -12,37 +12,37 @@ colors:
   brand-400: "#16bfe0"
   brand-500: "#06a3c4"
   accent-500: "#8b5cf6"
-  mist-100: "#eef2f8"
-  mist-200: "#cdd6e6"
-  mist-300: "#9fadc6"
-  mist-400: "#6b7a96"
+  mist-100: "#f4f7fb"
+  mist-200: "#dde5f0"
+  mist-300: "#b8c4d8"
+  mist-400: "#8a97b0"
 typography:
   display:
-    fontFamily: "Inter, system-ui, sans-serif"
+    fontFamily: "Plus Jakarta Sans, system-ui, sans-serif"
     fontSize: "clamp(2.25rem, 5vw, 3.75rem)"
     fontWeight: 700
     lineHeight: 1.05
     letterSpacing: "-0.02em"
   headline:
-    fontFamily: "Inter, system-ui, sans-serif"
+    fontFamily: "Plus Jakarta Sans, system-ui, sans-serif"
     fontSize: "clamp(1.75rem, 3vw, 2.5rem)"
     fontWeight: 700
     lineHeight: 1.15
     letterSpacing: "-0.01em"
   title:
-    fontFamily: "Inter, system-ui, sans-serif"
+    fontFamily: "Plus Jakarta Sans, system-ui, sans-serif"
     fontSize: "1.25rem"
     fontWeight: 600
     lineHeight: 1.3
     letterSpacing: "normal"
   body:
-    fontFamily: "Inter, system-ui, sans-serif"
+    fontFamily: "Source Sans 3, system-ui, sans-serif"
     fontSize: "1.125rem"
     fontWeight: 400
     lineHeight: 1.65
     letterSpacing: "normal"
   label:
-    fontFamily: "Inter, system-ui, sans-serif"
+    fontFamily: "Source Sans 3, system-ui, sans-serif"
     fontSize: "0.75rem"
     fontWeight: 500
     lineHeight: 1.2
@@ -112,8 +112,8 @@ answer to both is restraint: fewer effects, executed precisely.
 **Key Characteristics:**
 - Dark, layered ink surfaces (five-step `ink` ramp) for quiet depth.
 - Electric cyan as a rare status-light accent; violet only as occasional glow.
-- Single humanist-adjacent sans (Inter) across the whole scale; hierarchy by
-  weight and size, not by pairing.
+- Display + body pairing (Plus Jakarta Sans / Source Sans 3); hierarchy by
+  family, weight, and size.
 - Fully rounded pills for actions; soft 24px cards for containers.
 - Motion is gentle and functional (float, fade-up), never bouncy or elastic.
 
@@ -153,9 +153,10 @@ light that's on in the control room.
 - **Ink** (`#070a12` → `#28304a`, ink-950…600): The five-step dark surface ramp.
   `ink-950` is the page floor; higher steps layer cards, headers, and raised
   surfaces. Depth comes from this ramp plus translucency, not from heavy shadow.
-- **Mist** (`#eef2f8` → `#6b7a96`, mist-100…400): The text ramp. `mist-200` is
-  default body on dark; `mist-300` is secondary/subtitle; `mist-400` is the
-  quietest supporting text. White (`#ffffff`) is reserved for headings.
+- **Mist** (`#f4f7fb` → `#8a97b0`, mist-100…400): The text ramp. `mist-200` is
+  default body on dark; `mist-300` is secondary/subtitle (≥4.5:1 on ink);
+  `mist-400` is the quietest supporting text. White (`#ffffff`) is reserved for
+  headings.
 
 ### Named Rules
 **The Status-Light Rule.** Electric cyan appears on ≤10% of any screen. It marks
@@ -169,32 +170,31 @@ color and never on an interactive element. When in doubt, drop the violet.
 
 ## 3. Typography
 
-**Display Font:** Inter (with system-ui, sans-serif)
-**Body Font:** Inter (with system-ui, sans-serif)
+**Display Font:** Plus Jakarta Sans (with system-ui, sans-serif)
+**Body Font:** Source Sans 3 (with system-ui, sans-serif)
 
-**Character:** One neutral, highly legible humanist-adjacent sans across the
-entire scale, tuned with OpenType features (`cv02 cv03 cv04 cv11`) for a slightly
-warmer, less-mechanical letterform. Hierarchy is carried by weight and size, not
-by mixing families, a deliberate single-voice choice that reads as calm and
-consistent on the dark surface.
+**Character:** A calm display/body pairing. Plus Jakarta Sans carries headlines
+with slightly more character; Source Sans 3 keeps long Slovenian prose highly
+legible (latin-ext for č/š/ž). Hierarchy also uses weight and size.
 
 ### Hierarchy
 - **Display** (700, clamp 2.25→3.75rem, lh 1.05, tracking -0.02em): Hero and page
-  H1. `text-wrap: balance` on. White.
-- **Headline** (700, clamp 1.75→2.5rem, lh 1.15): Section H2s.
+  H1. `text-wrap: balance` on. White. Display family.
+- **Headline** (700, clamp 1.75→2.5rem, lh 1.15): Section H2s. Display family.
 - **Title** (600, 1.25rem, lh 1.3): Card and sub-section headings. White.
+  Display family.
 - **Body** (400, 1.125rem, lh 1.65): Default prose in `mist-200`; subtitles in
-  `mist-300`. Cap measure at 65–75ch (the hero uses `max-w-xl`).
+  `mist-300`. Cap measure at 65–75ch (the hero uses `max-w-xl`). Body family.
 - **Label** (500, 0.75rem, tracking 0.18em, UPPERCASE): The eyebrow pill and
-  small overline labels only.
+  small overline labels only. Body family.
 
 ### Named Rules
-**The One-Voice Rule.** Never introduce a second font family to create contrast.
-Contrast comes from weight (400 body vs. 700 display) and size. Adding a serif or
-a second sans breaks the calm-consistent voice.
+**The Pairing Rule.** Use Plus Jakarta Sans for display/headings and Source Sans
+3 for body/UI. Do not introduce a third family. Contrast comes from the pair
+plus weight and size.
 
 **The Legibility-Floor Rule.** Body text is never lighter than `mist-300`
-(`#9fadc6`) on `ink` surfaces. `mist-400` is for incidental supporting text only,
+(`#b8c4d8`) on `ink` surfaces. `mist-400` is for incidental supporting text only,
 never for a paragraph a homeowner must read. Verify ≥4.5:1, don't assume.
 
 ## 4. Elevation
@@ -205,9 +205,9 @@ primary CTA and to give cards a barely-there floor. The system is layered, not
 lifted, this is a calm control room, not a stack of floating glass panels.
 
 ### Shadow Vocabulary
-- **Glow** (`box-shadow: 0 0 0 1px rgba(61,214,245,0.18), 0 20px 60px -20px rgba(6,163,196,0.45)`):
-  Cyan halo under the primary button and the hero focal element only. This is the
-  "light is on" shadow, reserve it for the single most important action.
+- **Glow** (`box-shadow: 0 0 0 1px rgba(61,214,245,0.12), 0 12px 36px -18px rgba(6,163,196,0.28)`):
+  Soft cyan edge under the primary button and the hero focal element only. This is the
+  "light is on" shadow, reserve it for the single most important action, keep the bloom quiet.
 - **Card** (`box-shadow: 0 1px 0 0 rgba(255,255,255,0.04) inset, 0 20px 50px -25px rgba(0,0,0,0.8)`):
   A soft, deep, low-opacity floor under container cards. Ambient, not structural.
 
@@ -267,7 +267,8 @@ section. Reserve it for one or two intentional moments, not as section scaffoldi
   the surface (the Status-Light Rule).
 - **Do** build depth from the `ink` ramp + translucency + the ambient `card`
   shadow; keep shadows a whisper.
-- **Do** carry hierarchy with Inter weight and size alone (the One-Voice Rule).
+- **Do** carry hierarchy with Plus Jakarta Sans (display) and Source Sans 3
+  (body), plus weight and size (the Pairing Rule).
 - **Do** keep dark text on cyan buttons and verify body text ≥4.5:1, watch
   `mist-400` on ink, which is for incidental text only (the Legibility-Floor Rule).
 - **Do** give every animation a `prefers-reduced-motion: reduce` alternative;
@@ -287,7 +288,7 @@ section. Reserve it for one or two intentional moments, not as section scaffoldi
 - **Don't** let violet become a second CTA or accent color (the Cyan-Leads Rule).
 - **Don't** tip cyan into cold sci-fi neon or add HUD/spaceship motifs, it must
   read as a calm, trustworthy home system, not a control panel from a movie.
-- **Don't** introduce a second font family, fear-selling/urgency copy, or the
+- **Don't** introduce a third font family, fear-selling/urgency copy, or the
   SaaS hero-metric template (big number + gradient accent).
 - **Don't** nest cards inside cards, or use a `border-left`/`border-right` >1px
   colored stripe as a decorative accent.

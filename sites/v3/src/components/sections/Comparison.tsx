@@ -39,7 +39,7 @@ export function Comparison(props: Partial<ComparisonProps> = {}) {
             <ul className="mt-6 space-y-3">
               {c.wired.points.map((p) => (
                 <li key={p} className="flex items-start gap-3 text-sm text-mist-300">
-                  <Cross className="mt-0.5 h-5 w-5 shrink-0 text-mist-400/70" />
+                  <Cross className="mt-0.5 h-5 w-5 shrink-0 text-mist-400" />
                   {p}
                 </li>
               ))}

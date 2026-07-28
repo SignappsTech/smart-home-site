@@ -32,15 +32,15 @@ export function Footer() {
 
           {/* Nav */}
           <div>
-            <h4 className="text-sm font-semibold uppercase tracking-wider text-mist-400">
+            <h2 className="text-sm font-semibold uppercase tracking-wider text-mist-300">
               Povezave
-            </h4>
-            <ul className="mt-4 space-y-2.5">
+            </h2>
+            <ul className="mt-4 space-y-1">
               {navLinks.map((l) => (
                 <li key={l.href}>
                   <Link
                     href={l.href}
-                    className="text-sm text-mist-300 transition-colors hover:text-white"
+                    className="inline-flex min-h-11 items-center text-sm text-mist-200 transition-colors hover:text-white"
                   >
                     {l.label}
                   </Link>
@@ -51,24 +51,24 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="text-sm font-semibold uppercase tracking-wider text-mist-400">
+            <h2 className="text-sm font-semibold uppercase tracking-wider text-mist-300">
               Kontakt
-            </h4>
-            <ul className="mt-4 space-y-3">
+            </h2>
+            <ul className="mt-4 space-y-1">
               <li>
                 <a
                   href={`tel:${brand.phone}`}
-                  className="inline-flex items-center gap-2 text-sm text-mist-300 hover:text-white"
+                  className="inline-flex min-h-11 items-center gap-2 text-sm text-mist-200 hover:text-white"
                 >
-                  <Phone className="h-4 w-4 text-brand-300" /> {brand.phoneDisplay}
+                  <Phone className="h-4 w-4 text-brand-300" aria-hidden /> {brand.phoneDisplay}
                 </a>
               </li>
               <li>
                 <a
                   href={`mailto:${brand.email}`}
-                  className="inline-flex items-center gap-2 text-sm text-mist-300 hover:text-white"
+                  className="inline-flex min-h-11 items-center gap-2 text-sm text-mist-200 hover:text-white"
                 >
-                  <Mail className="h-4 w-4 text-brand-300" /> {brand.email}
+                  <Mail className="h-4 w-4 text-brand-300" aria-hidden /> {brand.email}
                 </a>
               </li>
               <li>
@@ -76,9 +76,9 @@ export function Footer() {
                   href={brand.addressMapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-sm text-mist-300 hover:text-white"
+                  className="inline-flex min-h-11 items-center gap-2 text-sm text-mist-200 hover:text-white"
                 >
-                  <MapPin className="h-4 w-4 shrink-0 text-brand-300" /> {brand.address}
+                  <MapPin className="h-4 w-4 shrink-0 text-brand-300" aria-hidden /> {brand.address}
                 </a>
               </li>
             </ul>
@@ -88,15 +88,21 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-white/10 pt-6 text-xs text-mist-400 sm:flex-row">
+        <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-white/10 pt-6 text-xs text-mist-300 sm:flex-row">
           <p>
             © {year} {brand.name}. Vse pravice pridržane.
           </p>
-          <div className="flex gap-5">
-            <Link href="/zasebnost/" className="hover:text-mist-200">
+          <div className="flex gap-2">
+            <Link
+              href="/zasebnost/"
+              className="inline-flex min-h-11 items-center px-2 hover:text-white"
+            >
               Zasebnost
             </Link>
-            <Link href="/piskotki/" className="hover:text-mist-200">
+            <Link
+              href="/piskotki/"
+              className="inline-flex min-h-11 items-center px-2 hover:text-white"
+            >
               Piškotki
             </Link>
           </div>

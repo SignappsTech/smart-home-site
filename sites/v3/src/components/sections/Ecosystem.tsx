@@ -38,7 +38,7 @@ export function Ecosystem(props: Partial<EcosystemProps> = {}) {
                     className="rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-3"
                   >
                     <p className="font-semibold text-white">{b.name}</p>
-                    <p className="text-xs text-mist-400">{b.note}</p>
+                    <p className="text-xs text-mist-300">{b.note}</p>
                   </div>
                 ))}
               </div>
@@ -56,7 +56,7 @@ export function Ecosystem(props: Partial<EcosystemProps> = {}) {
                   >
                     {c.name}
                     {!c.available && "label" in c && (
-                      <span className="rounded-full bg-white/10 px-1.5 py-0.5 text-[10px] uppercase tracking-wide text-mist-400">
+                      <span className="rounded-full bg-white/10 px-1.5 py-0.5 text-xs uppercase tracking-wide text-mist-300">
                         {c.label}
                       </span>
                     )}
@@ -69,7 +69,7 @@ export function Ecosystem(props: Partial<EcosystemProps> = {}) {
           {e.more && (
             <Link
               href={e.more.href}
-              className="mt-8 inline-flex items-center gap-2 text-sm font-medium text-brand-300 transition-colors hover:text-brand-200"
+              className="mt-8 inline-flex min-h-11 items-center gap-2 text-sm font-medium text-brand-300 transition-colors hover:text-brand-200"
             >
               {e.more.label} <ArrowRight className="h-4 w-4" />
             </Link>

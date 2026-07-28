@@ -180,7 +180,7 @@ export default function TehnologijePage() {
           </ul>
 
           <div className="mx-auto mt-20 max-w-2xl text-center">
-            <h3 className="text-2xl font-bold sm:text-3xl">{t.connectivity.title}</h3>
+            <h2 className="text-2xl font-bold sm:text-3xl">{t.connectivity.title}</h2>
             <p className="mt-4 text-lg text-mist-300">{t.connectivity.text}</p>
           </div>
 

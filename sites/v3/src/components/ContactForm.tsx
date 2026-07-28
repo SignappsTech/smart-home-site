@@ -147,7 +147,7 @@ export function ContactForm() {
         <ArrowRight className="h-4 w-4" />
       </button>
 
-      <p className="text-xs leading-relaxed text-mist-300">
+      <p className="max-w-md text-xs leading-relaxed text-mist-300">
         Z oddajo obrazca soglašate z obdelavo osebnih podatkov za namen odgovora
         na vaše povpraševanje. Več v{" "}
         <Link href="/zasebnost/" className="text-brand-300 hover:underline">

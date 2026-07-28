@@ -7,7 +7,7 @@ export function SectionLink({ label, href }: { label: string; href: string }) {
     <div className="mt-10 text-center">
       <Link
         href={href}
-        className="inline-flex items-center gap-2 text-sm font-medium text-brand-300 transition-colors hover:text-brand-200"
+        className="inline-flex min-h-11 items-center gap-2 py-2 text-sm font-medium text-brand-300 transition-colors hover:text-brand-200"
       >
         {label} <ArrowRight className="h-4 w-4" />
       </Link>

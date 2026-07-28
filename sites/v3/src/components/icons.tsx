@@ -17,7 +17,7 @@ type IconProps = SVGProps<SVGSVGElement>;
 const lucideFeature =
   (Icon: LucideIcon) =>
   (p: IconProps) =>
-    <Icon size={24} strokeWidth={1.6} {...p} />;
+    <Icon size={24} strokeWidth={1.6} aria-hidden {...p} />;
 
 export const PackagePlus = lucideFeature(PackagePlusIcon);
 export const Handshake = lucideFeature(HandshakeIcon);
@@ -31,6 +31,7 @@ const base = (p: IconProps) => ({
   strokeWidth: 1.6,
   strokeLinecap: "round" as const,
   strokeLinejoin: "round" as const,
+  "aria-hidden": true as const,
   ...p,
 });
 

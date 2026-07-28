@@ -41,10 +41,10 @@ const config: Config = {
           600: "#7c3aed",
         },
         mist: {
-          100: "#eef2f8",
-          200: "#cdd6e6",
-          300: "#9fadc6",
-          400: "#6b7a96",
+          100: "#f4f7fb",
+          200: "#dde5f0",
+          300: "#b8c4d8",
+          400: "#8a97b0",
         },
       },
       fontFamily: {
@@ -56,7 +56,7 @@ const config: Config = {
         "5xl": "2.5rem",
       },
       boxShadow: {
-        glow: "0 0 0 1px rgba(61,214,245,0.18), 0 20px 60px -20px rgba(6,163,196,0.45)",
+        glow: "0 0 0 1px rgba(61,214,245,0.12), 0 12px 36px -18px rgba(6,163,196,0.28)",
         card: "0 1px 0 0 rgba(255,255,255,0.04) inset, 0 20px 50px -25px rgba(0,0,0,0.8)",
       },
       backgroundImage: {

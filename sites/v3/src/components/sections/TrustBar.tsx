@@ -15,7 +15,7 @@ export function TrustBar(props: Partial<TrustBarProps> = {}) {
         aria-hidden
       />
       <div className="container-x relative py-12 sm:py-14">
-        <p className="text-center text-sm font-medium tracking-wide text-mist-300">
+        <p className="text-center text-base font-medium tracking-wide text-mist-300">
           {t.title}
         </p>
 
@@ -35,7 +35,7 @@ export function TrustBar(props: Partial<TrustBarProps> = {}) {
           ))}
         </div>
 
-        <p className="mt-6 text-center text-xs text-mist-400">{t.note}</p>
+        <p className="mt-6 text-center text-sm text-mist-300">{t.note}</p>
       </div>
     </section>
   );

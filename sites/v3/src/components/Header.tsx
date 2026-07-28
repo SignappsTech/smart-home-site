@@ -13,9 +13,6 @@ export function Header() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-  // Immersive routes (e.g. /dozivetje) render their own minimal chrome.
-  const immersive = pathname?.startsWith("/dozivetje");
-
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
     onScroll();
@@ -31,8 +28,6 @@ export function Header() {
     };
   }, [open]);
 
-  if (immersive) return null;
-
   return (
     <header
       className={`sticky top-0 z-50 transition-colors duration-300 ${
@@ -47,7 +42,7 @@ export function Header() {
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden items-center gap-8 lg:flex">
+        <nav className="hidden items-center gap-6 lg:flex">
           {navLinks.map((l) => {
             const active = isNavLinkActive(pathname, l.href);
             return (
@@ -55,7 +50,7 @@ export function Header() {
                 key={l.href}
                 href={l.href}
                 aria-current={active ? "page" : undefined}
-                className={`text-sm font-medium transition-colors ${
+                className={`inline-flex min-h-11 items-center text-sm font-medium transition-colors ${
                   active
                     ? "text-brand-200"
                     : "text-mist-300 hover:text-white"
@@ -68,7 +63,10 @@ export function Header() {
         </nav>
 
         <div className="hidden items-center gap-3 lg:flex">
-          <a href={`tel:${brand.phone}`} className="text-sm font-medium text-mist-300 hover:text-white">
+          <a
+            href={`tel:${brand.phone}`}
+            className="inline-flex min-h-11 items-center text-sm font-medium text-mist-300 hover:text-white"
+          >
             {brand.phoneDisplay}
           </a>
           <Link href="/kontakt/" className="btn-primary">
@@ -78,7 +76,7 @@ export function Header() {
 
         {/* Mobile toggle */}
         <button
-          className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-white lg:hidden"
+          className="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-white lg:hidden"
           aria-label={open ? "Zapri meni" : "Odpri meni"}
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
