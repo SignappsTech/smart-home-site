@@ -4,8 +4,8 @@
   "private": true,
   "description": "Workspace of standalone site variants under sites/*. Each variant is a complete Next.js app; the winner ships. See scripts/new-site.mjs to start a new variant.",
   "scripts": {
-    "dev": "pnpm --filter site-v1 dev",
-    "build": "pnpm --filter site-v1 build",
+    "dev": "pnpm --filter site-v3 dev",
+    "build": "pnpm --filter site-v3 build",
     "new-site": "node scripts/new-site.mjs",
     "lint": "pnpm -r lint",
     "typecheck": "pnpm -r typecheck",

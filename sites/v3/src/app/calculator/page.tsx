@@ -19,6 +19,7 @@ import {
   Cell,
   ResponsiveContainer,
 } from "recharts";
+import type { PieLabelRenderProps } from "recharts";
 
 // ---------------------------------------------------------------------------
 // Device catalog, edit prices here as your real costs become clearer
@@ -408,7 +409,7 @@ export default function CalculatorPage() {
                         outerRadius={85}
                         paddingAngle={3}
                         dataKey="value"
-                        label={({ name, percent }) => `${name} ${((percent ?? 0) * 100).toFixed(0)}%`}
+                        label={({ name, percent }: PieLabelRenderProps) => `${name} ${((percent ?? 0) * 100).toFixed(0)}%`}
                         labelLine={false}
                       >
                         {pieData.map((_, i) => (

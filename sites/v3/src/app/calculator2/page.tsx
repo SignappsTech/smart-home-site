@@ -34,6 +34,7 @@ import {
   Cell,
   ResponsiveContainer,
 } from "recharts";
+import type { PieLabelRenderProps } from "recharts";
 
 // ---------------------------------------------------------------------------
 // Device catalog, same shape as the margin calculator
@@ -845,7 +846,7 @@ export default function Calculator2Page() {
                         outerRadius={85}
                         paddingAngle={3}
                         dataKey="value"
-                        label={({ name, percent }) => `${name} ${((percent ?? 0) * 100).toFixed(0)}%`}
+                        label={({ name, percent }: PieLabelRenderProps) => `${name} ${((percent ?? 0) * 100).toFixed(0)}%`}
                         labelLine={false}
                       >
                         {pieData.map((entry, i) => (

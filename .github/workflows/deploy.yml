@@ -23,7 +23,7 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  PROD_SITE: v1 # which sites/<name> variant deploys to signapps.si
+  PROD_SITE: v3 # which sites/<name> variant deploys to signapps.si
 
 jobs:
   build:
