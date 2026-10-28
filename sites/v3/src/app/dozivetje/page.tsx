@@ -73,10 +73,10 @@ export default function DozivetjePage() {
             {d.cta.subtitle}
           </p>
           <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
-            <Link href={d.cta.primary.href} className="btn-primary">
+            <Link href={d.cta.primary.href} className="btn-primary" data-track="dozivetje_primary">
               {d.cta.primary.label} <ArrowRight className="h-4 w-4" />
             </Link>
-            <Link href={d.cta.secondary.href} className="btn-ghost">
+            <Link href={d.cta.secondary.href} className="btn-ghost" data-track="dozivetje_secondary">
               {d.cta.secondary.label}
             </Link>
           </div>

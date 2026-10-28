@@ -4,6 +4,9 @@ import "./globals.css";
 import { brand } from "@/lib/brand";
 import { Header } from "@/components/Header";
 import { SiteFooter } from "@/components/SiteFooter";
+import { Analytics } from "@/components/analytics/Analytics";
+import { Tracking } from "@/components/analytics/Tracking";
+import { ConsentBanner } from "@/components/analytics/ConsentBanner";
 
 const sourceSans = Source_Sans_3({
   subsets: ["latin", "latin-ext"], // latin-ext covers Slovenian č/š/ž
@@ -43,11 +46,14 @@ export default function RootLayout({
     <html lang={brand.lang} className={`${sourceSans.variable} ${plusJakarta.variable}`}>
       <head>
         <link rel="icon" type="image/x-icon" href="/assets/blue/signapps_S_rounded.ico" />
+        <Analytics />
       </head>
       <body className="min-h-screen bg-ink-950 font-sans">
         <Header />
         <main>{children}</main>
         <SiteFooter />
+        <Tracking />
+        <ConsentBanner />
       </body>
     </html>
   );

@@ -69,7 +69,7 @@ export function Header() {
           >
             {brand.phoneDisplay}
           </a>
-          <Link href="/kontakt/" className="btn-primary">
+          <Link href="/kontakt/" className="btn-primary" data-track="header_consult">
             Brezplačni posvet
           </Link>
         </div>
@@ -111,6 +111,7 @@ export function Header() {
               href="/kontakt/"
               onClick={() => setOpen(false)}
               className="btn-primary mt-3 w-full"
+              data-track="mobile_menu_consult"
             >
               Brezplačni posvet
             </Link>

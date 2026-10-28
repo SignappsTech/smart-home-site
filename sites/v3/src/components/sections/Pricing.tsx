@@ -60,6 +60,7 @@ export function Pricing(props: Partial<PricingProps> = {}) {
                 <Link
                   href={tier.cta.href}
                   className={featured ? "btn-primary mt-8" : "btn-ghost mt-8"}
+                  data-track={`pricing_tier_${tier.name.toLowerCase().replace(/\s+/g, "_")}`}
                 >
                   {tier.cta.label} <ArrowRight className="h-4 w-4" />
                 </Link>

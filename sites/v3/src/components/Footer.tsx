@@ -2,6 +2,7 @@ import Link from "next/link";
 import { brand, ecosystem } from "@/lib/brand";
 import { navLinks } from "@/lib/nav";
 import { Logo } from "@/components/Logo";
+import { CookieSettingsButton } from "@/components/analytics/CookieSettingsButton";
 import { Phone, Mail, MapPin } from "@/components/icons";
 
 export function Footer() {
@@ -105,6 +106,7 @@ export function Footer() {
             >
               Piškotki
             </Link>
+            <CookieSettingsButton />
           </div>
         </div>
       </div>
