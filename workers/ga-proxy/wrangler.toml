@@ -1,0 +1,17 @@
+name = "signapps-ga-proxy"
+main = "src/index.ts"
+compatibility_date = "2025-01-01"
+
+# Bind the Worker to the first-party subdomain. Requires the signapps.si zone
+# to be on Cloudflare. Until then, comment this out and use the temporary
+# *.workers.dev URL that `wrangler deploy` prints (third-party, easier to block).
+routes = [
+  { pattern = "stats.signapps.si", custom_domain = true }
+]
+
+[vars]
+GA_ID = "G-X87M51PC9X"
+# Keep the prefix neutral (no "analytics"/"ga"/"track"). Must match
+# NEXT_PUBLIC_GA_PROXY_URL = https://stats.signapps.si<PATH_PREFIX>
+PATH_PREFIX = "/m"
+ALLOWED_ORIGIN = "https://signapps.si"

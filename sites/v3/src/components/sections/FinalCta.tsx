@@ -45,7 +45,7 @@ export function FinalCta({ banded = false, ...props }: FinalCtaComponentProps = 
             {c.title}
           </h2>
           <p className="relative mx-auto mt-4 max-w-xl text-mist-200">{c.subtitle}</p>
-          <Link href={c.cta.href} className="btn-primary relative mt-8">
+          <Link href={c.cta.href} className="btn-primary relative mt-8" data-track="final_cta">
             {c.cta.label} <ArrowRight className="h-4 w-4" />
           </Link>
         </div>

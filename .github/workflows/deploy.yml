@@ -46,7 +46,15 @@ jobs:
       # custom domain signapps.si (no basePath). public/CNAME is copied into
       # the artifact so GitHub Pages keeps the custom domain across deploys.
       # The post-build script strips dev-only routes.
+      # GA4: the measurement ID is public (defaults to G-X87M51PC9X in code).
+      # NEXT_PUBLIC_GA_PROXY_URL points at the first-party Cloudflare Worker
+      # (workers/ga-proxy), e.g. https://stats.signapps.si/m. Set it under
+      # repo Settings → Secrets and variables → Actions → Variables
+      # (GA_PROXY_URL). Leave it unset to send hits straight to Google.
       - run: pnpm --filter "site-${PROD_SITE}" build
+        env:
+          NEXT_PUBLIC_GA_ID: ${{ vars.GA_ID || 'G-X87M51PC9X' }}
+          NEXT_PUBLIC_GA_PROXY_URL: ${{ vars.GA_PROXY_URL }}
 
       - uses: actions/upload-pages-artifact@v3
         with:

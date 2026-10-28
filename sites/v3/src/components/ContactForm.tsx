@@ -1,8 +1,9 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
+import { useRef, useState, type FormEvent } from "react";
 import Link from "next/link";
 import { ArrowRight } from "@/components/icons";
+import { track } from "@/lib/analytics";
 
 /**
  * Contact form for the static site.
@@ -27,6 +28,13 @@ type Status = "idle" | "sending" | "ok" | "error" | "unconfigured";
 
 export function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");
+  const started = useRef(false);
+
+  // GA4 funnel event: first interaction with the form. No field values are sent.
+  function onFocus() {
+    if (started.current) return;
+    if (track("form_start", { form_id: "contact" })) started.current = true;
+  }
 
   async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -58,11 +66,15 @@ export function ContactForm() {
       if (res.ok) {
         setStatus("ok");
         form.reset();
+        started.current = false;
+        track("generate_lead", { form_id: "contact" });
       } else {
         setStatus("error");
+        track("form_error", { form_id: "contact", status_code: res.status });
       }
     } catch {
       setStatus("error");
+      track("form_error", { form_id: "contact", status_code: 0 });
     }
   }
 
@@ -77,7 +89,7 @@ export function ContactForm() {
   );
 
   return (
-    <form onSubmit={onSubmit} className="flex h-full flex-col gap-4">
+    <form onSubmit={onSubmit} onFocus={onFocus} className="flex h-full flex-col gap-4">
       <div className="grid gap-4 sm:grid-cols-2">
         <label className="block">
           <span className="mb-1.5 block text-sm font-medium text-mist-200">

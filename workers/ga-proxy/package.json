@@ -1,0 +1,10 @@
+{
+  "name": "signapps-ga-proxy",
+  "private": true,
+  "type": "module",
+  "description": "First-party GA4 reverse proxy (Cloudflare Worker). Standalone, not part of the pnpm workspace.",
+  "scripts": {
+    "dev": "npx wrangler dev",
+    "deploy": "npx wrangler deploy"
+  }
+}

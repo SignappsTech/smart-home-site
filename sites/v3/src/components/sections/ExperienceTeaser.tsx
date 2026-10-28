@@ -24,7 +24,7 @@ export function ExperienceTeaser(props: Partial<ExperienceTeaserProps> = {}) {
           <div className="px-8 pb-10 pt-2 lg:p-12">
             <h2 className="text-2xl font-bold sm:text-3xl">{e.title}</h2>
             <p className="mt-4 leading-relaxed text-mist-300">{e.subtitle}</p>
-            <Link href={e.cta.href} className="btn-primary mt-8">
+            <Link href={e.cta.href} className="btn-primary mt-8" data-track="experience_teaser">
               {e.cta.label} <ArrowRight className="h-4 w-4" />
             </Link>
           </div>

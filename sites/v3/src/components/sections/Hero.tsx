@@ -33,10 +33,10 @@ export function Hero(props: Partial<HeroProps> = {}) {
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-3">
-            <Link href={h.primaryCta.href} className="btn-primary">
+            <Link href={h.primaryCta.href} className="btn-primary" data-track="hero_primary">
               {h.primaryCta.label} <ArrowRight className="h-4 w-4" />
             </Link>
-            <Link href={h.secondaryCta.href} className="btn-ghost">
+            <Link href={h.secondaryCta.href} className="btn-ghost" data-track="hero_secondary">
               {h.secondaryCta.label}
             </Link>
           </div>

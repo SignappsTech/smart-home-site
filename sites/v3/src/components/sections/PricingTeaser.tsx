@@ -36,7 +36,7 @@ export function PricingTeaser(props: Partial<PricingTeaserProps> = {}) {
         </p>
 
         <div className="mt-8 text-center">
-          <Link href={p.cta.href} className="btn-primary">
+          <Link href={p.cta.href} className="btn-primary" data-track="pricing_teaser">
             {p.cta.label} <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
