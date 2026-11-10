@@ -76,6 +76,39 @@ function GitHubIcon() {
   );
 }
 
+function MemberSocialLinks({
+  name,
+  linkedin,
+  github,
+}: {
+  name: string;
+  linkedin: string;
+  github: string;
+}) {
+  return (
+    <div className="flex items-center gap-1 text-mist-300">
+      <a
+        href={linkedin}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={`${name} na LinkedIn`}
+        className="inline-flex h-11 w-11 items-center justify-center rounded-xl transition-colors hover:text-brand-300"
+      >
+        <LinkedInIcon />
+      </a>
+      <a
+        href={github}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={`${name} na GitHub`}
+        className="inline-flex h-11 w-11 items-center justify-center rounded-xl transition-colors hover:text-brand-300"
+      >
+        <GitHubIcon />
+      </a>
+    </div>
+  );
+}
+
 export default function ONasPage() {
   return (
     <>
@@ -141,14 +174,14 @@ export default function ONasPage() {
         </div>
       </section>
 
-      {/* Team, real faces build trust. Larger portraits, human and credible. */}
+      {/* Team — cards on md+, horizontal rows on small screens */}
       <section className="section">
         <div className="container-x">
-          <div className="max-w-2xl">
-            <h2 className="text-3xl font-bold sm:text-4xl">
+          <div className="mx-auto max-w-2xl text-center">
+            <h2 className="text-3xl font-bold text-balance sm:text-4xl">
               Spoznaj našo ekipo
             </h2>
-            <p className="mt-4 text-lg leading-relaxed text-mist-300">
+            <p className="mt-4 text-lg leading-relaxed text-mist-300 text-pretty">
               Združujemo znanja s področja sistemske integracije, vgrajenih
               sistemov in avtomatizacije. Vsak projekt obravnavamo celostno,
               od načrtovanja do vzpostavitve živega sistema in podpore
@@ -156,59 +189,81 @@ export default function ONasPage() {
             </p>
           </div>
 
-          <div className="mt-14 grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
+          {/* Desktop / tablet: Version B cards, slightly larger */}
+          <div className="mx-auto mt-14 hidden max-w-4xl gap-6 md:grid md:grid-cols-3">
             {team.map((member) => (
               <div
-                key={member.name}
+                key={`cards-${member.name}`}
                 className="group flex flex-col overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] shadow-card transition-colors hover:border-brand-400/30"
               >
-                <div className="relative aspect-[4/5] w-full overflow-hidden bg-ink-800">
+                <div className="relative aspect-square w-full overflow-hidden bg-ink-800">
                   <Image
                     src={`${BASE_PATH}${member.image}`}
                     alt={member.name}
                     fill
                     className="object-cover transition-transform duration-300 group-hover:scale-[1.03]"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 25vw"
+                    sizes="240px"
                   />
                   <div
-                    className="pointer-events-none absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-ink-900 to-transparent"
+                    className="pointer-events-none absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-ink-900 to-transparent"
                     aria-hidden
                   />
                 </div>
 
-                <div className="flex flex-1 flex-col p-6">
+                <div className="flex flex-1 flex-col items-center p-5 text-center">
                   <h3 className="text-base font-semibold">{member.name}</h3>
                   <p className="mt-1 text-xs font-medium tracking-wide text-brand-300">
                     {member.role}
                   </p>
-                  <p className="mt-3 flex-1 text-sm leading-relaxed text-mist-300">
+                  <p className="mt-3 flex-1 text-sm leading-relaxed text-mist-300 text-pretty">
                     {member.bio}
                   </p>
 
-                  <div className="mt-5 flex items-center gap-1 text-mist-300">
-                    <a
-                      href={member.linkedin}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label={`${member.name} na LinkedIn`}
-                      className="inline-flex h-11 w-11 items-center justify-center rounded-xl transition-colors hover:text-brand-300"
-                    >
-                      <LinkedInIcon />
-                    </a>
-                    <a
-                      href={member.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label={`${member.name} na GitHub`}
-                      className="inline-flex h-11 w-11 items-center justify-center rounded-xl transition-colors hover:text-brand-300"
-                    >
-                      <GitHubIcon />
-                    </a>
+                  <div className="mt-4">
+                    <MemberSocialLinks
+                      name={member.name}
+                      linkedin={member.linkedin}
+                      github={member.github}
+                    />
                   </div>
                 </div>
               </div>
             ))}
           </div>
+
+          {/* Mobile: Version C horizontal-row treatment */}
+          <ul className="mt-12 divide-y divide-white/10 border-y border-white/10 md:hidden">
+            {team.map((member) => (
+              <li key={`rows-${member.name}`} className="grid gap-6 py-8">
+                <div className="relative mx-auto aspect-square w-36 overflow-hidden rounded-2xl bg-ink-800">
+                  <Image
+                    src={`${BASE_PATH}${member.image}`}
+                    alt={member.name}
+                    fill
+                    className="object-cover"
+                    sizes="144px"
+                  />
+                </div>
+
+                <div className="flex min-w-0 flex-col justify-center text-center">
+                  <h3 className="text-xl font-semibold">{member.name}</h3>
+                  <p className="mt-1 text-sm font-medium text-brand-300">
+                    {member.role}
+                  </p>
+                  <p className="mt-3 text-base leading-relaxed text-mist-300 text-pretty">
+                    {member.bio}
+                  </p>
+                  <div className="mt-4 flex justify-center">
+                    <MemberSocialLinks
+                      name={member.name}
+                      linkedin={member.linkedin}
+                      github={member.github}
+                    />
+                  </div>
+                </div>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 
