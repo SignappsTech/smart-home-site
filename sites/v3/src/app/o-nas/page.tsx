@@ -52,19 +52,11 @@ const team = [
   },
   {
     name: "Marcel Martinšek",
-    role: "Razvijalec programske opreme",
+    role: "Inž. računalništva in informatike",
     bio: "Navdušujejo me pametni sistemi, umetna inteligenca in avtomatizacija. Svoje znanje usmerjam v rešitve, ki dom naredijo intuitivnega in energetsko učinkovitega.",
     image: "/assets/Team/Marcel.jpg",
     linkedin: "https://www.linkedin.com/in/fransemartinsek/",
     github: "https://github.com/MarcelMartinsek",
-  },
-  {
-    name: "Tim Vrečič",
-    role: "Razvijalec programske opreme",
-    bio: "Uživam v razumevanju kompleksnih problemov in iskanju preprostih načinov za njihovo reševanje. Pri vsakem projektu stremim k temu, da je končni rezultat učinkovit, intuitiven in kakovostno izveden.",
-    image: "/assets/Team/Tim.jpg",
-    linkedin: "https://www.linkedin.com/in/tim-vre%C4%8Di%C4%8D-661831320/",
-    github: "https://github.com/vreca123",
   },
 ];
 
